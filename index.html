@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Agency 777 — Industrial-Grade AI for Gulf Coast Business</title>
+<meta name="description" content="Industrial-grade AI solutions for businesses across the Gulf Coast. Automation, lead generation, CRM, web design, and live AI voice agents. Serving Pensacola, Navarre, Destin, Fort Walton and the Emerald Coast.">
+
+<!-- ============================================================
+     LOCAL SEO — helps you show up for "AI automation near me"
+     ============================================================ -->
+<meta property="og:title" content="AI Agency 777 — Industrial-Grade AI for Gulf Coast Business">
+<meta property="og:description" content="Automation, lead gen, CRM and live AI voice agents. Serving the Emerald Coast.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root{
+  --abyss:#06171C;      /* page  */
+  --hull:#0C2830;       /* panel */
+  --hull-2:#123840;     /* raised panel */
+  --gulf:#22C3B0;       /* primary accent — gulf water */
+  --signal:#FFC93C;     /* secondary accent — channel marker buoy */
+  --shell:#E7EEEC;      /* primary text */
+  --mist:#89A6A6;       /* muted text */
+  --rule:rgba(137,166,166,.20);
+  --rule-hot:rgba(34,195,176,.45);
+
+  --display:'Archivo Black', system-ui, sans-serif;
+  --body:'IBM Plex Sans', system-ui, sans-serif;
+  --mono:'IBM Plex Mono', ui-monospace, monospace;
+
+  --wrap:1180px;
+  --gap:clamp(56px, 8vw, 112px);
+}
+
+*{box-sizing:border-box; margin:0; padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--abyss);
+  color:var(--shell);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+.wrap{max-width:var(--wrap); margin:0 auto; padding:0 24px}
+
+/* utility type */
+.mono{
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--gulf);
+}
+h1,h2,h3{font-family:var(--display); font-weight:400; line-height:1.02; letter-spacing:-.015em}
+a{color:inherit}
+
+:focus-visible{outline:2px solid var(--signal); outline-offset:3px; border-radius:2px}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+header{
+  position:sticky; top:0; z-index:60;
+  background:rgba(6,23,28,.82);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--rule);
+}
+.bar{
+  display:flex; align-items:center; justify-content:space-between;
+  height:68px;
+}
+.brand{display:flex; align-items:center; gap:12px; text-decoration:none}
+
+/* ---- MECHANICAL REELS ----
+   Three machined reels in a dark housing. Gold sevens.
+   The strip RESTS on 7 — the spin is animation layered on top,
+   so with motion disabled the mark still reads 777.          */
+.reels{
+  display:flex; gap:2px;
+  padding:3px;
+  background:#041216;
+  border:1px solid var(--rule-hot);
+}
+.reel{
+  width:15px; height:22px;
+  overflow:hidden;
+  position:relative;
+  background:linear-gradient(180deg,#1B4750 0%,#0A2830 48%,#1B4750 100%);
+}
+.reel::after{  /* detent — where the reel stops */
+  content:''; position:absolute; left:0; right:0; top:50%; height:1px;
+  background:rgba(255,255,255,.10); pointer-events:none;
+}
+.strip{
+  display:flex; flex-direction:column;
+  transform:translateY(-154px);   /* rests on the final 7 */
+}
+.strip span{
+  height:22px; flex:none;
+  display:grid; place-items:center;
+  font-family:var(--mono); font-size:13px; font-weight:500;
+  color:#4E7078;
+}
+.strip span:last-child{
+  color:var(--signal);           /* gold */
+  text-shadow:0 0 8px rgba(255,201,60,.55);
+}
+@keyframes reelspin{ from{transform:translateY(0)} to{transform:translateY(-154px)} }
+.brand.spin .reel:nth-child(1) .strip{animation:reelspin .78s cubic-bezier(.28,.9,.24,1) both}
+.brand.spin .reel:nth-child(2) .strip{animation:reelspin .98s cubic-bezier(.28,.9,.24,1) both}
+.brand.spin .reel:nth-child(3) .strip{animation:reelspin 1.20s cubic-bezier(.28,.9,.24,1) both}
+.brand:hover .reels{box-shadow:0 0 18px -3px rgba(255,201,60,.5); border-color:var(--signal)}
+.reels{transition:box-shadow .35s ease, border-color .35s ease}
+
+.brand-name{font-family:var(--display); font-size:16px; letter-spacing:.01em}
+.brand-name em{font-style:normal; color:var(--gulf)}
+
+nav{display:flex; align-items:center; gap:30px}
+nav a{
+  font-size:14px; text-decoration:none; color:var(--mist);
+  transition:color .18s;
+}
+nav a:hover{color:var(--shell)}
+
+.btn{
+  display:inline-block;
+  font-family:var(--mono); font-size:12px; font-weight:500;
+  letter-spacing:.12em; text-transform:uppercase;
+  padding:12px 20px;
+  text-decoration:none;
+  border:1px solid var(--gulf);
+  color:var(--abyss); background:var(--gulf);
+  cursor:pointer;
+  transition:transform .16s, box-shadow .16s;
+}
+.btn:hover{transform:translateY(-2px); box-shadow:0 6px 0 -2px rgba(34,195,176,.35)}
+.btn-ghost{background:transparent; color:var(--gulf)}
+.btn-ghost:hover{background:rgba(34,195,176,.10); box-shadow:none; transform:none}
+
+@media(max-width:860px){ nav .nav-link{display:none} }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{padding:clamp(56px,7vw,92px) 0 var(--gap); position:relative}
+/* faint depth-sounding gradient — reads as water, not decoration */
+.hero::before{
+  content:''; position:absolute; inset:0; z-index:-1;
+  background:
+    radial-gradient(900px 420px at 82% -8%, rgba(34,195,176,.13), transparent 62%),
+    radial-gradient(700px 380px at 8% 8%, rgba(255,201,60,.055), transparent 60%);
+  pointer-events:none;
+}
+.eyebrow{display:flex; align-items:center; gap:12px; margin-bottom:26px}
+.eyebrow .dash{width:34px; height:1px; background:var(--gulf)}
+
+h1{
+  font-size:clamp(38px, 6.2vw, 74px);
+  max-width:16ch;
+  margin-bottom:26px;
+}
+h1 .accent{color:var(--gulf)}
+.lede{
+  font-size:clamp(17px,1.9vw,20px);
+  color:var(--mist);
+  max-width:56ch;
+  margin-bottom:34px;
+}
+.lede strong{color:var(--shell); font-weight:600}
+.hero-cta{display:flex; flex-wrap:wrap; gap:14px}
+
+/* ============================================================
+   SIGNATURE ELEMENT — THE CONSOLE
+   ============================================================ */
+.console{
+  margin-top:64px;
+  border:1px solid var(--rule-hot);
+  background:linear-gradient(180deg, var(--hull) 0%, #081F26 100%);
+  box-shadow:0 24px 70px -30px rgba(0,0,0,.9), inset 0 1px 0 rgba(255,255,255,.05);
+}
+.console-head{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:16px; flex-wrap:wrap;
+  padding:15px 20px;
+  border-bottom:1px solid var(--rule);
+  background:rgba(255,255,255,.02);
+}
+.console-title{
+  font-family:var(--mono); font-size:12px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--shell);
+}
+.console-status{
+  display:flex; align-items:center; gap:9px;
+  font-family:var(--mono); font-size:11px; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--mist);
+}
+.led{
+  width:8px; height:8px; border-radius:50%;
+  background:var(--gulf); box-shadow:0 0 0 0 rgba(34,195,176,.6);
+  animation:pulse 2.4s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(34,195,176,.55)}
+  70%{box-shadow:0 0 0 9px rgba(34,195,176,0)}
+  100%{box-shadow:0 0 0 0 rgba(34,195,176,0)}
+}
+
+.channels{display:grid; grid-template-columns:repeat(3,1fr)}
+@media(max-width:820px){ .channels{grid-template-columns:1fr} }
+
+.channel{
+  padding:30px 24px 26px;
+  border-right:1px solid var(--rule);
+  display:flex; flex-direction:column;
+  position:relative;
+  transition:background .2s;
+}
+.channel:last-child{border-right:none}
+@media(max-width:820px){
+  .channel{border-right:none; border-bottom:1px solid var(--rule)}
+  .channel:last-child{border-bottom:none}
+}
+.channel:hover{background:rgba(34,195,176,.045)}
+.channel.is-live{background:rgba(34,195,176,.09)}
+
+.ch-code{
+  font-family:var(--mono); font-size:11px; letter-spacing:.16em;
+  color:var(--signal); margin-bottom:16px;
+}
+.ch-name{
+  font-family:var(--display); font-size:22px; line-height:1.15;
+  margin-bottom:10px;
+}
+.ch-desc{font-size:14.5px; color:var(--mist); margin-bottom:22px; flex:1}
+.ch-desc b{color:var(--shell); font-weight:600}
+
+/* the press-to-talk control */
+.talk{
+  display:flex; align-items:center; gap:12px;
+  width:100%;
+  padding:13px 16px;
+  background:transparent;
+  border:1px solid var(--gulf);
+  color:var(--gulf);
+  font-family:var(--mono); font-size:11.5px; font-weight:500;
+  letter-spacing:.12em; text-transform:uppercase;
+  cursor:pointer;
+  transition:background .18s, color .18s;
+}
+.talk:hover{background:var(--gulf); color:var(--abyss)}
+.talk.is-live{background:var(--signal); border-color:var(--signal); color:var(--abyss)}
+
+/* audio bars — only animate when a channel is live */
+.bars{display:flex; align-items:flex-end; gap:2px; height:13px; flex:none}
+.bars i{width:2.5px; height:3px; background:currentColor; display:block}
+.talk.is-live .bars i{animation:eq .75s ease-in-out infinite}
+.talk.is-live .bars i:nth-child(2){animation-delay:.14s}
+.talk.is-live .bars i:nth-child(3){animation-delay:.28s}
+.talk.is-live .bars i:nth-child(4){animation-delay:.42s}
+@keyframes eq{0%,100%{height:3px} 50%{height:13px}}
+
+.console-foot{
+  padding:13px 20px;
+  border-top:1px solid var(--rule);
+  font-family:var(--mono); font-size:11px; letter-spacing:.08em;
+  color:var(--mist);
+  background:rgba(0,0,0,.22);
+}
+
+/* ============================================================
+   THE FIELD — a living background
+   A sparse voxel lattice drifting behind everything, plasma-lit
+   and coupled to scroll. This is the answer to "no stock photos":
+   an automation agency's background should look like a system
+   running, not like a man in a headset pointing at a hologram.
+   Created in JS — without it the page is simply dark, not broken.
+   ============================================================ */
+#field{
+  position:fixed; inset:0; z-index:-2;
+  pointer-events:none;
+  opacity:.85;
+}
+#field canvas{display:block; width:100%; height:100%}
+
+#wash{
+  position:fixed; inset:0; z-index:-3; pointer-events:none;
+  background:
+    radial-gradient(760px 620px at 78% 12%, rgba(34,195,176,.16), transparent 62%),
+    radial-gradient(680px 560px at 12% 78%, rgba(255,201,60,.07), transparent 60%);
+  transition:opacity .9s ease;
+  will-change:transform, opacity;
+  animation:breathe 7s ease-in-out infinite;
+}
+/* The wash inhales and exhales. Slow — 7s — so it reads as a
+   system idling, not as something blinking for attention. */
+@keyframes breathe{
+  0%,100%{ opacity:.75; transform:scale(1) }
+  50%    { opacity:1;   transform:scale(1.06) }
+}
+body{position:relative}
+
+/* ---- SERVICE ICONS ----
+   Vector, not raster: crisp on every display, zero HTTP requests,
+   and they inherit the palette for free. ---- */
+/* The cell is a two-column instrument label: the words carry the
+   meaning, the mark carries the recognition. Grid placement means
+   the HTML never had to change — the icon simply moves. */
+.cell{
+  display:grid;
+  grid-template-columns:1fr auto;
+  column-gap:20px;
+  align-items:start;
+}
+.cell .code{grid-column:1; grid-row:1; margin-bottom:12px}
+.cell h3   {grid-column:1; grid-row:2}
+.cell p    {grid-column:1; grid-row:3}
+.cell .ico{
+  grid-column:2; grid-row:1 / span 3;
+  align-self:center; justify-self:end;
+  width:62px; height:62px; margin:0;
+  color:var(--mist); opacity:.5;
+  transition:color .35s ease, opacity .35s ease,
+             transform .5s cubic-bezier(.16,1,.3,1);
+}
+.ico svg{width:100%; height:100%; display:block; overflow:visible}
+.cell:hover .ico{
+  color:var(--gulf); opacity:1;
+  transform:translateY(-4px) scale(1.08) rotate(-2deg);
+}
+.cell:hover .ico svg{filter:drop-shadow(0 0 14px rgba(34,195,176,.6))}
+@media(max-width:560px){
+  .cell .ico{width:48px; height:48px}
+}
+
+/* ---- SECTION PLATES ----
+   Where a photograph goes, once you have one worth using.
+   Set --img on a .plate and it renders behind that section,
+   desaturated and dimmed so the copy stays readable.
+   Leave it unset and the field simply shows through. ---- */
+.plate{
+  position:absolute; inset:0; z-index:-1;
+  pointer-events:none; overflow:hidden;
+}
+.plate::before{
+  content:''; position:absolute; inset:0;
+  background-image:var(--img, none);
+  background-size:cover; background-position:center;
+  opacity:.18; filter:grayscale(1) contrast(1.15);
+}
+.plate::after{
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(180deg, var(--abyss) 0%, rgba(6,23,28,.5) 42%, var(--abyss) 100%);
+}
+section, .coverage{position:relative}
+
+/* ============================================================
+   CAPABILITY BOARD
+   ============================================================ */
+section{padding:var(--gap) 0}
+.sec-head{margin-bottom:46px; max-width:60ch}
+.sec-head h2{font-size:clamp(28px,3.6vw,42px); margin:16px 0 14px}
+.sec-head p{color:var(--mist)}
+
+.board{
+  border:1px solid var(--rule);
+  display:grid; grid-template-columns:repeat(3,1fr);
+}
+@media(max-width:900px){ .board{grid-template-columns:repeat(2,1fr)} }
+@media(max-width:560px){ .board{grid-template-columns:1fr} }
+
+.cell{
+  padding:26px 24px;
+  border-right:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  transition:background .2s;
+}
+.cell:hover{background:var(--hull)}
+.cell .code{
+  font-family:var(--mono); font-size:11px; letter-spacing:.14em;
+  color:var(--mist); display:block; margin-bottom:12px;
+}
+.cell h3{font-size:17px; font-family:var(--body); font-weight:600; margin-bottom:7px; letter-spacing:0}
+.cell p{font-size:14px; color:var(--mist); line-height:1.5}
+.cell:hover .code{color:var(--signal)}
+
+/* ============================================================
+   HOW IT WORKS — a real sequence, so numbers are honest here
+   ============================================================ */
+.steps{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule)}
+@media(max-width:800px){ .steps{grid-template-columns:1fr} }
+.step{background:var(--abyss); padding:34px 26px}
+.step .num{
+  font-family:var(--display); font-size:44px; color:var(--hull-2);
+  line-height:1; margin-bottom:16px; display:block;
+}
+.step h3{font-size:19px; margin-bottom:9px}
+.step p{font-size:14.5px; color:var(--mist)}
+
+/* ============================================================
+   COVERAGE
+   ============================================================ */
+.coverage{
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  background:linear-gradient(90deg, rgba(34,195,176,.05), transparent 70%);
+  padding:38px 0;
+}
+.towns{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
+.town{
+  font-family:var(--mono); font-size:12px; letter-spacing:.1em;
+  text-transform:uppercase;
+  padding:8px 14px;
+  border:1px solid var(--rule);
+  color:var(--mist);
+  transition:border-color .18s, color .18s;
+}
+.town:hover{border-color:var(--gulf); color:var(--shell)}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start}
+@media(max-width:880px){ .contact-grid{grid-template-columns:1fr; gap:44px} }
+
+form{display:grid; gap:16px}
+label{
+  font-family:var(--mono); font-size:11px; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--mist); display:block; margin-bottom:7px;
+}
+input,textarea,select{
+  width:100%;
+  background:var(--hull);
+  border:1px solid var(--rule);
+  color:var(--shell);
+  font-family:var(--body); font-size:15px;
+  padding:13px 14px;
+  transition:border-color .18s;
+}
+input:focus,textarea:focus,select:focus{border-color:var(--gulf); outline:none}
+textarea{min-height:110px; resize:vertical}
+.form-note{font-size:13px; color:var(--mist)}
+.form-msg{font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; min-height:18px}
+.form-msg.ok{color:var(--gulf)}
+.form-msg.err{color:var(--signal)}
+
+.contact-copy h2{font-size:clamp(28px,3.6vw,42px); margin:16px 0 18px}
+.contact-copy p{color:var(--mist); margin-bottom:26px}
+.direct{border-top:1px solid var(--rule); padding-top:22px}
+.direct dt{font-family:var(--mono); font-size:11px; letter-spacing:.13em; text-transform:uppercase; color:var(--mist); margin-bottom:5px}
+.direct dd{margin-bottom:18px; font-size:16px}
+.direct a{color:var(--gulf); text-decoration:none}
+.direct a:hover{text-decoration:underline}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{border-top:1px solid var(--rule); padding:40px 0}
+.foot{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap}
+.foot p{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--mist)}
+
+/* ============================================================
+   MOTION SYSTEM
+   The console metaphor drives every effect: a scanning light
+   passing over an instrument panel. One idea, applied
+   consistently — not six unrelated tricks.
+   ============================================================ */
+
+/* --- 1. SONAR CURSOR — a light that tracks the pointer across
+       panel surfaces. This is the signature interaction. --- */
+.cell, .channel, .step{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+}
+.cell::before, .channel::before, .step::before{
+  content:'';
+  position:absolute; inset:0; z-index:-1;
+  background:radial-gradient(
+    260px circle at var(--mx,50%) var(--my,50%),
+    rgba(34,195,176,.15),
+    transparent 68%
+  );
+  opacity:0;
+  transition:opacity .35s ease;
+}
+.cell:hover::before, .channel:hover::before, .step:hover::before{opacity:1}
+
+/* --- 2. TRACE LINE — a hairline that draws itself along the
+       leading edge, like a circuit energizing. --- */
+.cell::after, .step::after{
+  content:'';
+  position:absolute; left:0; top:0; bottom:0;
+  width:2px;
+  background:linear-gradient(180deg, var(--gulf), var(--signal));
+  transform:scaleY(0);
+  transform-origin:top;
+  transition:transform .42s cubic-bezier(.16,1,.3,1);
+}
+.cell:hover::after, .step:hover::after{transform:scaleY(1)}
+
+.cell{transition:background .3s ease, transform .3s cubic-bezier(.16,1,.3,1)}
+.cell:hover{transform:translateY(-3px)}
+.cell h3{transition:color .25s ease, transform .35s cubic-bezier(.16,1,.3,1)}
+.cell:hover h3{color:var(--gulf); transform:translateX(5px)}
+.cell .code{transition:color .25s ease, letter-spacing .35s ease}
+.cell:hover .code{color:var(--signal); letter-spacing:.2em}
+.cell p{transition:color .25s ease}
+.cell:hover p{color:var(--shell)}
+
+/* --- 3. STEP NUMERALS — the ghost numeral lights up and
+       drifts, so the sequence feels like it's advancing. --- */
+.step .num{transition:color .35s ease, transform .45s cubic-bezier(.16,1,.3,1)}
+.step:hover .num{color:var(--gulf); transform:translateX(6px)}
+.step h3{transition:color .3s ease}
+.step:hover h3{color:var(--signal)}
+
+/* --- 4. BUTTON WIPE — the fill sweeps in rather than
+       snapping. Applied to the ghost/outline button. --- */
+.btn{position:relative; overflow:hidden; z-index:1}
+.btn::before{
+  content:'';
+  position:absolute; inset:0; z-index:-1;
+  background:var(--gulf);
+  transform:translateX(-101%);
+  transition:transform .4s cubic-bezier(.16,1,.3,1);
+}
+.btn-ghost:hover{background:transparent; color:var(--abyss)}
+.btn-ghost:hover::before{transform:translateX(0)}
+
+/* --- 5. TALK CONTROL — border energizes, label nudges,
+       equalizer bars wake up on hover before going live. --- */
+.talk{
+  position:relative; overflow:hidden;
+  transition:background .22s ease, color .22s ease,
+             letter-spacing .3s ease, box-shadow .3s ease;
+}
+.talk:hover{
+  letter-spacing:.16em;
+  box-shadow:0 0 22px -4px rgba(34,195,176,.55);
+}
+.talk .talk-label{transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.talk:hover .talk-label{transform:translateX(3px)}
+.talk:hover .bars i{animation:eq .95s ease-in-out infinite}
+.talk:hover .bars i:nth-child(2){animation-delay:.12s}
+.talk:hover .bars i:nth-child(3){animation-delay:.24s}
+.talk:hover .bars i:nth-child(4){animation-delay:.36s}
+
+/* --- 6. CHANNEL CARDS — lift, and the channel code brightens
+       like a switchboard lamp coming on. --- */
+.channel{transition:background .28s ease, transform .35s cubic-bezier(.16,1,.3,1)}
+.channel:hover{transform:translateY(-2px)}
+.channel .ch-code{transition:color .28s ease, letter-spacing .35s ease}
+.channel:hover .ch-code{letter-spacing:.22em}
+.channel .ch-name{transition:color .28s ease}
+.channel:hover .ch-name{color:var(--gulf)}
+
+/* --- 7. TOWN CHIPS — fill from the bottom, like a tide
+       coming in. Small joke, appropriate to the coast. --- */
+.town{
+  position:relative; overflow:hidden; z-index:1;
+  transition:color .28s ease, border-color .28s ease, transform .3s cubic-bezier(.16,1,.3,1);
+}
+.town::before{
+  content:'';
+  position:absolute; inset:0; z-index:-1;
+  background:var(--gulf);
+  transform:translateY(101%);
+  transition:transform .35s cubic-bezier(.16,1,.3,1);
+}
+.town:hover{color:var(--abyss); border-color:var(--gulf); transform:translateY(-3px)}
+.town:hover::before{transform:translateY(0)}
+
+/* --- 8. NAV — underline draws left to right. --- */
+nav .nav-link{position:relative; padding-bottom:3px}
+nav .nav-link::after{
+  content:'';
+  position:absolute; left:0; right:0; bottom:0; height:1px;
+  background:var(--gulf);
+  transform:scaleX(0); transform-origin:left;
+  transition:transform .32s cubic-bezier(.16,1,.3,1);
+}
+nav .nav-link:hover::after{transform:scaleX(1)}
+
+/* --- 9. BRAND — the reels respin on hover (see reel block above). --- */
+
+/* --- 10. FORM — fields glow when focused, like an
+        instrument accepting input. --- */
+input,textarea,select{transition:border-color .25s ease, box-shadow .3s ease, background .25s ease}
+input:hover,textarea:hover,select:hover{border-color:var(--rule-hot)}
+input:focus,textarea:focus,select:focus{
+  box-shadow:0 0 0 3px rgba(34,195,176,.13);
+  background:var(--hull-2);
+}
+
+.direct a{position:relative}
+.direct a::after{
+  content:''; position:absolute; left:0; right:0; bottom:-2px; height:1px;
+  background:var(--signal);
+  transform:scaleX(0); transform-origin:left;
+  transition:transform .3s cubic-bezier(.16,1,.3,1);
+}
+.direct a:hover{text-decoration:none; color:var(--signal)}
+.direct a:hover::after{transform:scaleX(1)}
+
+/* --- 11. SCROLL REVEAL — content surfaces as you descend,
+        which suits a page about depth. Restrained: 1 move. --- */
+.reveal{
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.in{opacity:1; transform:none}
+
+/* ============================================================
+   DEREZZ — the boot sequence
+   A field of plasma voxels resolves out of the dark, holds,
+   then disintegrates from the centre outward to reveal the page.
+   The overlay is created in JS, never in HTML — so a visitor
+   with no JS gets the site immediately, uncovered.
+   ============================================================ */
+#derezz{
+  position:fixed; inset:0; z-index:9999;
+  background:var(--abyss);
+  cursor:pointer;
+  transition:opacity .6s ease;
+}
+#derezz.done{opacity:0; pointer-events:none}
+#derezz canvas{display:block; width:100%; height:100%}
+
+.skip-hint{
+  position:absolute; left:0; right:0; bottom:36px;
+  text-align:center;
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.24em;
+  text-transform:uppercase; color:rgba(137,166,166,.45);
+  pointer-events:none;
+  animation:hintfade 2.4s ease-in-out infinite;
+}
+@keyframes hintfade{0%,100%{opacity:.35} 50%{opacity:.8}}
+
+/* ============================================================
+   ELECTRIFICATION — the beat after the derezz
+   Every visible element stutters as current reaches it, then
+   settles. Deliberately NOT a strobe: opacity dips plus a glow,
+   never black-to-white, and each element runs on its own random
+   delay so the screen never flashes as one surface. That is the
+   difference between "electrical" and "seizure risk".
+   ============================================================ */
+@keyframes zapA{
+  0%{opacity:1}      5%{opacity:.32}   8%{opacity:1}
+  15%{opacity:.55}  18%{opacity:1}    34%{opacity:.4}
+  38%{opacity:1}    56%{opacity:.78}  60%{opacity:1}
+  100%{opacity:1}
+}
+@keyframes zapB{
+  0%{opacity:1}     10%{opacity:.5}   13%{opacity:1}
+  22%{opacity:.28}  27%{opacity:1}    44%{opacity:.7}
+  47%{opacity:1}    68%{opacity:.86}  71%{opacity:1}
+  100%{opacity:1}
+}
+@keyframes zapC{
+  0%{opacity:1}      7%{opacity:.66}  11%{opacity:1}
+  29%{opacity:.36}  33%{opacity:1}    41%{opacity:.8}
+  45%{opacity:1}    62%{opacity:.5}   66%{opacity:1}
+  100%{opacity:1}
+}
+/* the glow rides on top — this is what sells it as current,
+   rather than a page that is simply broken */
+@keyframes arcglow{
+  0%,100%{ text-shadow:none; box-shadow:none }
+  12%{ text-shadow:0 0 12px rgba(34,195,176,.9), 0 0 3px rgba(255,255,255,.7) }
+  30%{ text-shadow:0 0 7px rgba(255,201,60,.75) }
+  55%{ text-shadow:0 0 14px rgba(34,195,176,.6) }
+  80%{ text-shadow:0 0 4px rgba(255,201,60,.4) }
+}
+.zap{ will-change:opacity }
+.zap.a{ animation:zapA 1.9s steps(60,end) var(--zd,0s) both, arcglow 1.9s ease-out var(--zd,0s) both }
+.zap.b{ animation:zapB 2.1s steps(60,end) var(--zd,0s) both, arcglow 2.1s ease-out var(--zd,0s) both }
+.zap.c{ animation:zapC 1.7s steps(60,end) var(--zd,0s) both, arcglow 1.7s ease-out var(--zd,0s) both }
+
+/* the switchboard LED takes the charge hardest — it is the only
+   thing on the page that is actually powered */
+.led.hot{ box-shadow:0 0 26px 5px rgba(34,195,176,.95) !important }
+
+/* Content waits behind the derezz, then rises into place. */
+.booting header, .booting main, .booting footer{opacity:0; transform:translateY(16px)}
+.booted  header, .booted  main, .booted  footer{
+  opacity:1; transform:none;
+  transition:opacity .85s cubic-bezier(.16,1,.3,1),
+             transform .85s cubic-bezier(.16,1,.3,1);
+}
+.booted main  {transition-delay:.08s}
+.booted footer{transition-delay:.16s}
+
+/* ============================================================
+   ACCESSIBILITY — everything above is decoration.
+   If motion is unwelcome, none of it runs.
+   ============================================================ */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none !important; transition:none !important; scroll-behavior:auto !important}
+  .reveal{opacity:1 !important; transform:none !important}
+  #derezz{display:none !important}
+  #field,#wash{display:none !important}
+  .zap{animation:none !important; opacity:1 !important; text-shadow:none !important}
+  .booting header,.booting main,.booting footer{opacity:1 !important; transform:none !important}
+  .cell::before,.channel::before,.step::before{display:none}
+}
+
+/* Touch devices get no hover states — don't leave them stuck on */
+@media(hover:none){
+  .cell::before,.channel::before,.step::before{display:none}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" id="brand" href="#top" aria-label="AI Agency 777 — home">
+      <span class="reels" aria-hidden="true">
+        <span class="reel"><span class="strip"><span>3</span><span>9</span><span>4</span><span>1</span><span>6</span><span>2</span><span>8</span><span>7</span></span></span>
+        <span class="reel"><span class="strip"><span>5</span><span>2</span><span>8</span><span>3</span><span>1</span><span>9</span><span>4</span><span>7</span></span></span>
+        <span class="reel"><span class="strip"><span>1</span><span>6</span><span>3</span><span>9</span><span>2</span><span>5</span><span>8</span><span>7</span></span></span>
+      </span>
+      <span class="brand-name">AI <em>AGENCY</em></span>
+    </a>
+    <nav>
+      <a class="nav-link" href="#demo">Live agents</a>
+      <a class="nav-link" href="#capabilities">What we build</a>
+      <a class="nav-link" href="#process">How it works</a>
+      <a class="btn" href="#contact">Book a call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ==================== HERO + CONSOLE ==================== -->
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="dash"></span>
+      <span class="mono">Gulf Coast &middot; Florida Panhandle</span>
+    </div>
+
+    <h1>Your business runs 24 hours. <span class="accent">Your staff doesn't.</span></h1>
+
+    <p class="lede">
+      Industrial-grade AI solutions for businesses across the Gulf Coast. We build the
+      systems that answer the phone, chase the lead, update the CRM and send the report —
+      <strong>while you're closed.</strong>
+    </p>
+
+    <div class="hero-cta">
+      <a class="btn" href="#demo">Talk to a live agent</a>
+      <a class="btn btn-ghost" href="#capabilities">See what we build</a>
+    </div>
+
+    <!-- ---------- SIGNATURE: THE CONSOLE ---------- -->
+    <div class="console" id="demo">
+      <div class="console-head">
+        <span class="console-title">Live agent switchboard</span>
+        <span class="console-status"><span class="led"></span> 3 channels online</span>
+      </div>
+
+      <div class="channels">
+        <div class="channel" data-channel="reception">
+          <span class="ch-code">CH-01 / Reception</span>
+          <h3 class="ch-name">After-hours front desk</h3>
+          <p class="ch-desc">Answers every call you'd otherwise miss. Takes the name, the number, the reason — and <b>texts it to you before the caller hangs up.</b></p>
+          <button class="talk" data-agent="reception">
+            <span class="bars"><i></i><i></i><i></i><i></i></span>
+            <span class="talk-label">Press to talk</span>
+          </button>
+        </div>
+
+        <div class="channel" data-channel="booking">
+          <span class="ch-code">CH-02 / Booking</span>
+          <h3 class="ch-name">Appointment desk</h3>
+          <p class="ch-desc">Checks the real calendar, offers real openings, books the slot. <b>Confirmation lands in Google Calendar</b> while the call is still live.</p>
+          <button class="talk" data-agent="booking">
+            <span class="bars"><i></i><i></i><i></i><i></i></span>
+            <span class="talk-label">Press to talk</span>
+          </button>
+        </div>
+
+        <div class="channel" data-channel="qualifier">
+          <span class="ch-code">CH-03 / Sales</span>
+          <h3 class="ch-name">Lead qualifier</h3>
+          <p class="ch-desc">Asks four questions, scores the lead, drops it into your CRM. <b>Your team only calls the ones worth calling.</b></p>
+          <button class="talk" data-agent="qualifier">
+            <span class="bars"><i></i><i></i><i></i><i></i></span>
+            <span class="talk-label">Press to talk</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="console-foot">
+        These are real agents, not recordings. Your microphone is used only while a channel is live.
+        Sessions are capped at 3 minutes.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== CAPABILITIES ==================== -->
+<section id="capabilities">
+  <div class="plate"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">What we build</span>
+      <h2>Twelve systems. One operator.</h2>
+      <p>We don't sell software licenses. We build the machinery your business is currently doing by hand — then we hand you the keys.</p>
+    </div>
+
+    <div class="board">
+      <div class="cell"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h5M15 6h5M4 18h5M15 18h5"/><circle cx="12" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M12 8.5v7"/></svg></span><span class="code">SYS-01</span><h3>Workflow automation</h3><p>The repetitive work between your tools, done without anyone touching it.</p></div>
+      <div class="cell"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4v7a7 7 0 0 0 14 0V4"/><path d="M5 4h4v7a3 3 0 0 0 6 0V4h4"/><path d="M9 20h6"/></svg></span><span class="code">SYS-02</span><h3>Lead generation</h3><p>Finds prospects, enriches them, and puts them in front of your sales team.</p></div>
+      <div class="cell"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v4M8 22h8"/></svg></span><span class="code">SYS-03</span><h3>Live AI voice agents</h3><p>Agents that answer, qualify, book, and hand off. Phone and web.</p></div>
+      <div class="cell"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg></span><span class="code">SYS-04</span><h3>Web design</h3><p>Fast, built to convert, and wired into everything else on this list.</p></div>
+      <div class="cell"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M5.5 16.5a3.8 3.8 0 0 1 7 0M15 10h4M15 14h3"/></svg></span><span class="code">SYS-05</span><h3>CRM setup &amp; integration</h3><p>One record per customer. Every touchpoint writes to it automatically.</p></div>
+      <div class="cell"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.3M8.2 13.2l7.6 4.3"/></svg></span><span class="code">SYS-06</span><h3>Social media automation</h3><p>Scheduled, on-brand, and consistent — without a full-time coordinator.</p></div>
+      <div class="cell"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/><path d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3"/></svg></span><span class="code">SYS-07</span><h3>Online advertising</h3><p>Campaigns that report back to the CRM, so you know what actually paid.</p></div>
+      <div class="cell"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3.5h6v2.5H9z"/><path d="M8.5 11.5l1.8 1.8 3.7-3.7M8.5 17h7"/></svg></span><span class="code">SYS-08</span><h3>AI office assistant</h3><p>Drafts, summarizes, files, and follows up on the admin nobody wants.</p></div>
+      <div class="cell"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16"/><rect x="5" y="12" width="3.2" height="6"/><rect x="10.4" y="7" width="3.2" height="11"/><rect x="15.8" y="10" width="3.2" height="8"/></svg></span><span class="code">SYS-09</span><h3>Sales reporting</h3><p>The numbers you'd build by hand every Monday, waiting for you on Monday.</p></div>
+      <div class="cell"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5.5" rx="7" ry="2.8"/><path d="M5 5.5v13c0 1.5 3.1 2.8 7 2.8s7-1.3 7-2.8v-13"/><path d="M5 12c0 1.5 3.1 2.8 7 2.8s7-1.3 7-2.8"/></svg></span><span class="code">SYS-10</span><h3>Data automation</h3><p>Moves, cleans and reconciles data between systems that don't talk.</p></div>
+      <div class="cell"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.5 7l9.5 6.5L21.5 7"/></svg></span><span class="code">SYS-11</span><h3>Email &amp; SMS campaigns</h3><p>Triggered by behavior, not by a calendar reminder to "send something."</p></div>
+      <div class="cell"><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5a5 5 0 0 0-6.2 6.2L3 15v6h6l5.3-5.3a5 5 0 0 0 6.2-6.2l-3.2 3.2-2.8-.7-.7-2.8z"/></svg></span><span class="code">SYS-12</span><h3>Custom builds</h3><p>If it's repeatable, it's automatable. Tell us the bottleneck.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PROCESS ==================== -->
+<section id="process">
+  <div class="plate"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">How it works</span>
+      <h2>Three weeks, not three quarters.</h2>
+      <p>Numbered because it genuinely is a sequence — each step depends on the one before it.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <span class="num">01</span>
+        <h3>Map</h3>
+        <p>We sit with your team and find the work that happens the same way every time. That's the work a machine should be doing.</p>
+      </div>
+      <div class="step">
+        <span class="num">02</span>
+        <h3>Build</h3>
+        <p>We build it against your real tools — your CRM, your calendar, your inbox. No rip-and-replace, no new software to learn.</p>
+      </div>
+      <div class="step">
+        <span class="num">03</span>
+        <h3>Run</h3>
+        <p>It goes live, we watch it, we tune it. You keep the system. We're not renting you your own operations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== COVERAGE ==================== -->
+<div class="coverage">
+  <div class="wrap">
+    <span class="mono">Service area &middot; Emerald Coast</span>
+    <div class="towns">
+      <span class="town">Pensacola</span>
+      <span class="town">Navarre</span>
+      <span class="town">Gulf Breeze</span>
+      <span class="town">Fort Walton Beach</span>
+      <span class="town">Destin</span>
+      <span class="town">Miramar Beach</span>
+      <span class="town">Santa Rosa</span>
+      <span class="town">Crestview</span>
+      <span class="town">Orange Beach</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== CONTACT ==================== -->
+<section id="contact">
+  <div class="plate"></div>
+  <div class="wrap contact-grid">
+    <div class="contact-copy">
+      <span class="mono">Book a call</span>
+      <h2>Tell us what's eating your week.</h2>
+      <p>Twenty minutes. We'll tell you straight whether AI actually solves it — and if it doesn't, we'll say so.</p>
+      <dl class="direct">
+        <dt>Email</dt>
+        <dd><a href="mailto:sales@aiagency777.com">sales@aiagency777.com</a></dd>
+        <dt>Phone</dt>
+        <dd><a href="tel:+19713357255">(971) 335-7255</a></dd>
+        <dt>Based in</dt>
+        <dd>Navarre, Florida</dd>
+      </dl>
+    </div>
+
+    <form id="lead-form" novalidate>
+      <div>
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" required autocomplete="name">
+      </div>
+      <div>
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" required autocomplete="email">
+      </div>
+      <div>
+        <label for="f-biz">Business</label>
+        <input id="f-biz" name="business" type="text" autocomplete="organization">
+      </div>
+      <div>
+        <label for="f-need">What do you need built?</label>
+        <select id="f-need" name="need">
+          <option>Live AI voice agent</option>
+          <option>Workflow automation</option>
+          <option>Lead generation</option>
+          <option>CRM setup</option>
+          <option>Website</option>
+          <option>Not sure yet — let's talk</option>
+        </select>
+      </div>
+      <div>
+        <label for="f-msg">Details</label>
+        <textarea id="f-msg" name="message"></textarea>
+      </div>
+      <button class="btn" type="submit" id="f-submit">Send it</button>
+      <p class="form-msg" id="f-status" role="status" aria-live="polite"></p>
+      <p class="form-note">We reply within one business day. No sequences, no drip, no nonsense.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p>&copy; 2026 AI Agency 777 &middot; Navarre, FL</p>
+    <p>Industrial-grade AI &middot; Gulf Coast</p>
+  </div>
+</footer>
+
+<!-- ============================================================
+     CONFIG — THE ONLY PART YOU NEED TO EDIT
+     ============================================================
+     1. Create 3 agents in ElevenLabs (Conversational AI).
+     2. Set each one to PUBLIC with authentication disabled.
+     3. Paste each agent's ID below.
+     4. In the ElevenLabs dashboard, BEFORE going live:
+          - set a hard spending cap
+          - allowlist your domain
+          - cap max conversation duration (~3 min)
+     5. Create an n8n webhook, paste its URL into N8N_WEBHOOK_URL.
+     ============================================================ -->
+<script>
+const AGENTS = {
+  reception: 'PASTE_RECEPTION_AGENT_ID',
+  booking:   'PASTE_BOOKING_AGENT_ID',
+  qualifier: 'PASTE_QUALIFIER_AGENT_ID'
+};
+
+const N8N_WEBHOOK_URL = 'PASTE_YOUR_N8N_WEBHOOK_URL';
+
+/* ---------- Voice console ----------
+   Only one channel can be live at a time, so we mount a single
+   ElevenLabs widget and swap its agent-id. This keeps costs
+   predictable and stops three mics opening at once.            */
+let activeAgent = null;
+
+function mountWidget(agentId){
+  document.querySelectorAll('elevenlabs-convai').forEach(el => el.remove());
+  const w = document.createElement('elevenlabs-convai');
+  w.setAttribute('agent-id', agentId);
+  w.setAttribute('variant', 'expanded');
+  w.setAttribute('start-call-text', 'Start');
+  w.setAttribute('end-call-text', 'Hang up');
+  w.setAttribute('avatar-orb-color-1', '#22C3B0');
+  w.setAttribute('avatar-orb-color-2', '#FFC93C');
+  document.body.appendChild(w);
+}
+
+function resetChannels(){
+  document.querySelectorAll('.channel').forEach(c => c.classList.remove('is-live'));
+  document.querySelectorAll('.talk').forEach(b => {
+    b.classList.remove('is-live');
+    b.querySelector('.talk-label').textContent = 'Press to talk';
+  });
+}
+
+document.querySelectorAll('.talk').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const key = btn.dataset.agent;
+    const id  = AGENTS[key];
+
+    if (!id || id.startsWith('PASTE_')) {
+      alert('Agent not configured yet — paste your ElevenLabs agent ID into the AGENTS object in index.html.');
+      return;
+    }
+
+    // tapping the live channel again shuts it down
+    if (activeAgent === key) {
+      document.querySelectorAll('elevenlabs-convai').forEach(el => el.remove());
+      activeAgent = null;
+      resetChannels();
+      return;
+    }
+
+    resetChannels();
+    activeAgent = key;
+    btn.classList.add('is-live');
+    btn.closest('.channel').classList.add('is-live');
+    btn.querySelector('.talk-label').textContent = 'Live — tap to end';
+    mountWidget(id);
+  });
+});
+
+/* ---------- Motion: sonar cursor + scroll reveal ---------- */
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const canHover      = window.matchMedia('(hover: hover)').matches;
+
+/* ---------- The reels ----------
+   Spin on load, respin on hover. The strip already rests on 7,
+   so if the animation never runs the mark still reads 777.   */
+const brand = document.getElementById('brand');
+
+function spinReels(){
+  if (reducedMotion) return;
+  brand.classList.remove('spin');
+  void brand.offsetWidth;            // force reflow so the animation can restart
+  brand.classList.add('spin');
+}
+brand.addEventListener('mouseenter', spinReels);
+
+/* ---------- THE FIELD: living background ----------
+   A sparse voxel lattice. Each cell only lights when the plasma
+   wave crosses its threshold, so at any instant most of the grid
+   is dark — that keeps it cheap AND keeps it from competing with
+   the text. Scroll drives the field's depth offset.
+
+   Pauses when the tab is hidden. Never runs under reduced motion. */
+function startField(){
+  if (reducedMotion) return;
+
+  const wash = document.createElement('div');
+  wash.id = 'wash';
+  document.body.appendChild(wash);
+
+  const host = document.createElement('div');
+  host.id = 'field';
+  host.innerHTML = '<canvas></canvas>';
+  document.body.appendChild(host);
+
+  const cv  = host.querySelector('canvas');
+  const ctx = cv.getContext('2d', { alpha:true, desynchronized:true });
+
+  // A 4K monitor must not be handed 4x the work of a laptop. The
+  // lattice spacing is derived from the cell BUDGET, not the other
+  // way round — so the cost is bounded no matter the display.
+  let MAX_CELLS = 900;
+  let W, H, GAP, cols, rows, halo = true;
+
+  function size(){
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    W = window.innerWidth; H = window.innerHeight;
+    GAP = Math.max(34, Math.round(Math.sqrt((W * H) / MAX_CELLS)));
+    cols = Math.ceil(W / GAP) + 2;
+    rows = Math.ceil(H / GAP) + 2;
+    cv.width = W * dpr; cv.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  size();
+  window.addEventListener('resize', size);
+
+  let scroll = 0, target = 0;
+  window.addEventListener('scroll', () => { target = window.scrollY; }, { passive:true });
+
+  const A = [34, 195, 176], B = [255, 201, 60];
+
+  let raf = 0, running = true, dead = false;
+  let ema = 16, samples = 0, strikes = 0, last = performance.now();
+
+  function stop(){
+    dead = true; running = false;
+    cancelAnimationFrame(raf);
+    host.remove();
+    window.removeEventListener('resize', size);
+  }
+
+  function draw(now){
+    if (dead) return;
+
+    // --- frame budget. If this machine cannot hold the frame, we
+    // --- take work away from it. Twice. Then we get out entirely.
+    const dt = now - last; last = now;
+    if (dt < 200) ema = ema * 0.9 + dt * 0.1;   // ignore tab-switch gaps
+    if (++samples > 90){
+      samples = 0;
+      if (ema > 23){
+        strikes++;
+        if (strikes === 1){ halo = false; }               // drop the bloom
+        else if (strikes === 2){ MAX_CELLS = 420; size(); } // halve the lattice
+        else { stop(); return; }                           // give the machine its GPU back
+        ema = 16;
+      }
+    }
+
+    const t = now / 1000;
+    scroll += (target - scroll) * 0.06;
+
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    const drift = scroll * 0.14;
+
+    // ONE slow breath drives the field: the gate drops (more of the
+    // lattice ignites) while the brightness lifts (what is lit burns
+    // harder). Together that reads as a charge building and releasing.
+    const pulse = 0.5 + 0.5 * Math.sin(t * 0.85);
+    const GATE  = 0.46 - pulse * 0.16;
+    const LIFT  = 0.62 + pulse * 0.62;
+    const inv   = 1 / (1 - GATE);
+
+    for (let r = 0; r < rows; r++){
+      const y  = (r - 1) * GAP;
+      const wy = y + (drift % GAP);
+      const gy = y + drift;
+      const sy1 = Math.sin(gy * 0.013 - t * 0.42);
+      const sm  = (Math.sin(gy * 0.004 + t * 0.25) + 1) / 2;
+
+      const cr = (A[0] + (B[0] - A[0]) * sm) | 0;
+      const cg = (A[1] + (B[1] - A[1]) * sm) | 0;
+      const cb = (A[2] + (B[2] - A[2]) * sm) | 0;
+      const col = `rgb(${cr},${cg},${cb})`;
+      ctx.fillStyle = col;                    // set once per ROW, not per cell
+
+      for (let c = 0; c < cols; c++){
+        const x = (c - 1) * GAP;
+        const v = (
+          Math.sin(x * 0.011 + t * 0.55) + sy1 +
+          Math.sin((x + gy) * 0.007 + t * 0.3)
+        ) / 3;
+
+        if (v < GATE) continue;
+        const a = Math.min(1, (v - GATE) * inv * LIFT);
+        const s = 2 + a * 6;
+
+        // Bloom without shadowBlur. Three stacked translucent rects
+        // approximate a glow for roughly the cost of three fills —
+        // shadowBlur costs ~50-100x a fill and was crashing machines.
+        if (halo && a > 0.55){
+          ctx.globalAlpha = a * 0.10;
+          ctx.fillRect(x - s*1.9, wy - s*1.9, s*3.8, s*3.8);
+          ctx.globalAlpha = a * 0.16;
+          ctx.fillRect(x - s*1.1, wy - s*1.1, s*2.2, s*2.2);
+        }
+
+        ctx.globalAlpha = a * 0.62;
+        ctx.fillRect(x - s/2, wy - s/2, s, s);
+      }
+    }
+
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.globalAlpha = 1;
+    wash.style.transform = `translateY(${-scroll * 0.06}px)`;
+
+    raf = requestAnimationFrame(draw);
+  }
+
+  raf = requestAnimationFrame(draw);
+
+  // One loop. Ever. The old code could stack a second rAF chain on
+  // every tab switch, and each one kept scheduling more.
+  document.addEventListener('visibilitychange', () => {
+    if (dead) return;
+    if (document.hidden){
+      running = false;
+      cancelAnimationFrame(raf);
+    } else if (!running){
+      running = true;
+      last = performance.now();
+      raf = requestAnimationFrame(draw);
+    }
+  });
+}
+
+/* ---------- ELECTRIFY: the beat after the derezz ----------
+   Current reaches each element at a slightly different moment,
+   so the page stutters alive in pieces rather than blinking as
+   one surface. That stagger is not a stylistic choice — a whole
+   screen flashing in unison is a photosensitivity hazard. This
+   never flashes more than a fraction of the viewport at a time.
+
+   Only elements ALREADY ON SCREEN are charged. Anything below
+   the fold still belongs to the scroll-reveal, and animating a
+   hidden element's opacity would drag it into view early.     */
+const ZAP_SELECTOR = [
+  '.brand-name', 'nav .nav-link', '.bar .btn',
+  '.eyebrow .mono', 'h1', '.lede', '.hero-cta .btn',
+  '.console-title', '.console-status', '.ch-code', '.ch-name',
+  '.ch-desc', '.talk', '.console-foot'
+].join(',');
+
+function electrify(){
+  if (reducedMotion) return;
+
+  const vh = window.innerHeight;
+  const els = [...document.querySelectorAll(ZAP_SELECTOR)]
+    .filter(el => {
+      const r = el.getBoundingClientRect();
+      return r.top < vh && r.bottom > 0;      // on screen only
+    });
+
+  const variants = ['a', 'b', 'c'];
+
+  els.forEach(el => {
+    el.classList.add('zap', variants[(Math.random() * 3) | 0]);
+    // up to 1.5s of scatter — no two elements arc together
+    el.style.setProperty('--zd', `${(Math.random() * 1.5).toFixed(2)}s`);
+  });
+
+  // the LED is the one thing genuinely under load
+  const led = document.querySelector('.led');
+  if (led){
+    setTimeout(() => led.classList.add('hot'), 500);
+    setTimeout(() => led.classList.remove('hot'), 2400);
+  }
+
+  // strip the classes once the charge settles, so hover states
+  // and scroll-reveal are handed back a clean DOM
+  setTimeout(() => {
+    els.forEach(el => {
+      el.classList.remove('zap', 'a', 'b', 'c');
+      el.style.removeProperty('--zd');
+    });
+  }, 4200);
+}
+
+/* ---------- DEREZZ: the boot sequence ----------
+   Three acts, on one canvas:
+     RESOLVE   voxels flicker into existence, centre outward
+     PLASMA    the field breathes — colour cycles gulf -> gold
+     DEREZZ    it disintegrates from the centre out, and the
+               page is revealed underneath
+
+   Everything here is decoration. If the visitor asked for
+   reduced motion, or JS never runs, they just get the site.  */
+function derezz(){
+  const host = document.createElement('div');
+  host.id = 'derezz';
+  host.innerHTML = '<canvas></canvas><p class="skip-hint">Click to skip</p>';
+  document.documentElement.classList.add('booting');
+  document.body.appendChild(host);
+
+  const cv  = host.querySelector('canvas');
+  const ctx = cv.getContext('2d', { alpha:false, desynchronized:true });
+
+  // Bounded cube count. Previously a 4K display generated 8,400 cubes
+  // and 500,000 canvas save/restore calls per second.
+  const MAX_CUBES = 900;
+  let W, H, cells, CELL;
+
+  function build(){
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    W = window.innerWidth; H = window.innerHeight;
+    CELL = Math.max(30, Math.round(Math.sqrt((W * H) / MAX_CUBES)));
+    cv.width = W * dpr; cv.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    const cx = W / 2, cy = H / 2, maxD = Math.hypot(cx, cy);
+    cells = [];
+    for (let y = 0; y < H + CELL; y += CELL){
+      for (let x = 0; x < W + CELL; x += CELL){
+        const d = Math.hypot(x - cx, y - cy) / maxD;
+        const ang = Math.atan2(y - cy, x - cx);
+        cells.push({
+          x, y,
+          tIn:  240 + d * 420 + Math.random() * 220,
+          tOut: 1180 + d * 340 + Math.random() * 260,
+          vx: Math.cos(ang) * (70 + Math.random() * 190),
+          vy: Math.sin(ang) * (70 + Math.random() * 190) - 110,
+          seed: Math.random() * 6.283,
+          fk:   Math.random() * 40 + 30      // flicker rate, fixed at build
+        });
+      }
+    }
+  }
+
+  build();
+  window.addEventListener('resize', build);
+
+  const START = performance.now();
+  const END   = 2250;
+  let finished = false, slow = 0, frames = 0, last = START;
+
+  function finish(){
+    if (finished) return;
+    finished = true;
+    host.classList.add('done');
+    document.documentElement.classList.remove('booting');
+    document.documentElement.classList.add('booted');
+    spinReels();
+    startField();
+    electrify();
+    setTimeout(() => { host.remove(); window.removeEventListener('resize', build); }, 700);
+  }
+
+  host.addEventListener('click', finish);
+
+  function frame(now){
+    // If the opening animation itself is choking the machine, the
+    // opening animation is not worth having. Bail to the site.
+    const dt = now - last; last = now;
+    if (++frames > 8 && dt > 34 && ++slow > 6){ finish(); return; }
+
+    const t = now - START;
+    const ts = t / 1000;
+
+    ctx.fillStyle = '#06171C';
+    ctx.fillRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (let i = 0; i < cells.length; i++){
+      const c = cells[i];
+      let a, s = CELL - 3, flash = 0, px = c.x, py = c.y;
+
+      if (t < c.tIn) continue;
+
+      if (t < c.tOut){
+        const age = t - c.tIn;
+        a = age < 220 ? age / 220 : 1;
+        // deterministic flicker — no Math.random() in the hot loop
+        if (age < 200 && Math.sin(age * c.fk) > 0.55) a *= 0.35;
+      } else {
+        const p = (t - c.tOut) / 720;
+        if (p >= 1) continue;
+        a = 1 - p;
+        s = (CELL - 3) * (1 - p * 0.85);
+        flash = p < 0.16 ? (1 - p / 0.16) : 0;
+        px += c.vx * p;
+        py += c.vy * p + 190 * p * p;      // gravity takes the debris
+      }
+
+      const w = (
+        Math.sin(c.x * 0.014 + ts * 2.0 + c.seed) +
+        Math.sin(c.y * 0.018 + ts * 1.5) +
+        Math.sin((c.x + c.y) * 0.009 + ts * 1.1)
+      ) / 3;
+      const m = (w + 1) / 2;
+
+      let r = A0 + (B0 - A0) * m;
+      let g = A1 + (B1 - A1) * m;
+      let b = A2 + (B2 - A2) * m;
+      if (flash){ r += (255-r)*flash; g += (255-g)*flash; b += (255-b)*flash; }
+
+      const col = `rgb(${r|0},${g|0},${b|0})`;
+
+      // No save/restore, no rotate. Tumbling debris cost 130,000
+      // save/restore pairs per second and was not worth the frames.
+      ctx.fillStyle = col;
+      ctx.globalAlpha = a * 0.34;
+      ctx.fillRect(px, py, s, s);
+
+      ctx.globalAlpha = a * 0.9;
+      ctx.strokeStyle = col;
+      ctx.lineWidth = 1;
+      ctx.strokeRect(px, py, s, s);
+
+      ctx.globalAlpha = a * 0.5;
+      ctx.fillRect(px, py, s, 2);          // top-face highlight = reads as a cube
+    }
+
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.globalAlpha = 1;
+
+    if (t < END && !finished) requestAnimationFrame(frame);
+    else finish();
+  }
+
+  requestAnimationFrame(frame);
+}
+
+const A0 = 34, A1 = 195, A2 = 176;
+const B0 = 255, B1 = 201, B2 = 60;
+
+if (reducedMotion) {
+  spinReels();                     // no-op under reduced motion, but keeps the call site honest
+} else if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(derezz);   // wait for fonts so nothing reflows behind the overlay
+} else {
+  window.addEventListener('load', derezz);
+}
+
+/* The light that follows the pointer across panel surfaces. */
+if (canHover && !reducedMotion) {
+  const panels = document.querySelectorAll('.cell, .channel, .step');
+  panels.forEach(panel => {
+    panel.addEventListener('pointermove', (e) => {
+      const r = panel.getBoundingClientRect();
+      panel.style.setProperty('--mx', `${e.clientX - r.left}px`);
+      panel.style.setProperty('--my', `${e.clientY - r.top}px`);
+    });
+  });
+}
+
+/* Content surfaces as you scroll. One movement, staggered. */
+if (!reducedMotion && 'IntersectionObserver' in window) {
+  const targets = [...document.querySelectorAll(
+    '.sec-head, .board .cell, .steps .step, .towns .town, .contact-copy, #lead-form'
+  )].filter(el => !charged.has(el) && !el.classList.contains('charge'));
+
+  targets.forEach(el => el.classList.add('reveal'));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      // stagger siblings so rows cascade rather than snapping in together
+      const siblings = Array.from(entry.target.parentElement.children);
+      const i = siblings.indexOf(entry.target);
+      entry.target.style.transitionDelay = `${Math.min(i, 8) * 55}ms`;
+      entry.target.classList.add('in');
+      io.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+  targets.forEach(el => io.observe(el));
+}
+
+/* ---------- Lead form -> n8n webhook ---------- */
+const form   = document.getElementById('lead-form');
+const status = document.getElementById('f-status');
+const submit = document.getElementById('f-submit');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  if (!data.name || !data.email) {
+    status.textContent = 'Add your name and email so we can reply.';
+    status.className = 'form-msg err';
+    return;
+  }
+
+  if (N8N_WEBHOOK_URL.startsWith('PASTE_')) {
+    status.textContent = 'Webhook not connected yet.';
+    status.className = 'form-msg err';
+    return;
+  }
+
+  submit.disabled = true;
+  status.textContent = 'Sending…';
+  status.className = 'form-msg';
+
+  try {
+    const res = await fetch(N8N_WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...data, source: 'aiagency777.com', ts: new Date().toISOString() })
+    });
+    if (!res.ok) throw new Error(res.status);
+
+    form.reset();
+    status.textContent = 'Sent. We\'ll reply within one business day.';
+    status.className = 'form-msg ok';
+  } catch (err) {
+    status.textContent = 'That didn\'t send. Email sales@aiagency777.com instead.';
+    status.className = 'form-msg err';
+  } finally {
+    submit.disabled = false;
+  }
+});
+</script>
+
+<!-- ElevenLabs widget runtime -->
+<script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+
+</body>
+</html>
