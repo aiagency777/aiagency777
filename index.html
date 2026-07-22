@@ -918,8 +918,104 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <dd>Navarre, Florida</dd>
       </dl>
     </div>
+<form
+  id="lead-form"
+  action="https://api.web3forms.com/submit"
+  method="POST"
+  novalidate
+>
+  <input
+    type="hidden"
+    name="access_key"
+    value="4e92a018-3e6c-46b3-aa48-05164ecfef4d"
+  >
 
-    <form id="lead-form" novalidate>
+  <input
+    type="hidden"
+    name="subject"
+    value="New AI Agency Website Lead"
+  >
+
+  <!-- Honeypot: real users cannot see or complete this field -->
+  <input
+    type="checkbox"
+    name="botcheck"
+    class="hidden"
+    style="display: none;"
+    tabindex="-1"
+    autocomplete="off"
+  >
+
+  <div>
+    <label for="f-name">Name</label>
+    <input
+      id="f-name"
+      name="name"
+      type="text"
+      required
+      autocomplete="name"
+      maxlength="100"
+    >
+  </div>
+
+  <div>
+    <label for="f-email">Email</label>
+    <input
+      id="f-email"
+      name="email"
+      type="email"
+      required
+      autocomplete="email"
+      maxlength="254"
+    >
+  </div>
+
+  <div>
+    <label for="f-biz">Business</label>
+    <input
+      id="f-biz"
+      name="business"
+      type="text"
+      autocomplete="organization"
+      maxlength="150"
+    >
+  </div>
+
+  <div>
+    <label for="f-need">What do you need built?</label>
+    <select id="f-need" name="need">
+      <option>Live AI voice agent</option>
+      <option>Workflow automation</option>
+      <option>Lead generation</option>
+      <option>CRM setup</option>
+      <option>Website</option>
+      <option>Not sure yet — let's talk</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="f-msg">Details</label>
+    <textarea
+      id="f-msg"
+      name="message"
+      maxlength="3000"
+    ></textarea>
+  </div>
+
+  <button class="btn" type="submit" id="f-submit">Send it</button>
+
+  <p
+    class="form-msg"
+    id="f-status"
+    role="status"
+    aria-live="polite"
+  ></p>
+
+  <p class="form-note">
+    We reply within one business day. No sequences, no drip, no nonsense.
+  </p>
+</form>
+    <!-- <form id="lead-form" novalidate>
       <div>
         <label for="f-name">Name</label>
         <input id="f-name" name="name" type="text" required autocomplete="name">
@@ -950,7 +1046,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <button class="btn" type="submit" id="f-submit">Send it</button>
       <p class="form-msg" id="f-status" role="status" aria-live="polite"></p>
       <p class="form-note">We reply within one business day. No sequences, no drip, no nonsense.</p>
-    </form>
+    </form> -->
   </div>
 </section>
 
