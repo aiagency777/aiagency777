@@ -1592,6 +1592,56 @@ form.addEventListener('submit', async (e) => {
 
 <!-- ElevenLabs widget runtime -->
 <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
+<!--lead ajax-->
+        <script>
+(() => {
+  const leadForm = document.getElementById('lead-form');
+  const submitButton = document.getElementById('f-submit');
+  const statusMessage = document.getElementById('f-status');
 
+  if (!leadForm || !submitButton || !statusMessage) return;
+
+  leadForm.addEventListener('submit', async function (event) {
+    event.preventDefault();
+
+    if (!leadForm.checkValidity()) {
+      leadForm.reportValidity();
+      return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
+    statusMessage.textContent = '';
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(leadForm),
+        headers: {
+          Accept: 'application/json'
+        }
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'Submission failed');
+      }
+
+      statusMessage.textContent =
+        'Thank you! Your message has been sent successfully.';
+
+      leadForm.reset();
+    } catch (error) {
+      statusMessage.textContent =
+        'Sorry, your message could not be sent. Please try again.';
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Send it';
+    }
+  });
+})();
+</script>
+        
 </body>
 </html>
