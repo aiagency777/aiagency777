@@ -1,0 +1,25 @@
+# robots.txt — aiagency777.com
+# Full crawl allowed. Nothing on this site is private.
+
+User-agent: *
+Allow: /
+
+# Explicit allow for AI answer engines.
+# Redundant with the wildcard above, but stated deliberately:
+# this site sells visibility in AI search, so it should be readable by them.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://aiagency777.com/sitemap.xml
