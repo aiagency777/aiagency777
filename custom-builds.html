@@ -1,0 +1,2502 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M4GN4KB2');</script>
+
+<title>Custom Builds — AI &amp; Workflow Engineering | AI Agency 777</title>
+<link rel="canonical" href="https://aiagency777.com/custom-builds.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="description" content="Custom AI and workflow engineering for businesses that have outgrown Zapier and off-the-shelf software. Private AI models, mobile approval chains, legacy software bridges and bespoke automation. Micro-builds from $3,500. You own 100% of the code.">
+<meta name="keywords" content="custom AI development, workflow engineering, custom automation, legacy system integration, API bridge, private AI model, approval workflow automation, bespoke software, Zapier alternative">
+<link rel="icon" href="favicon.ico" sizes="32x32">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<meta property="og:title" content="Custom Builds — AI &amp; Workflow Engineering">
+<meta property="og:description" content="If it's repeatable, it's automatable. When standard apps say 'that's impossible,' we build the engineering that does it. Micro-builds from $3,500, and you own the code.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="AI Agency 777">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://aiagency777.com/custom-builds.html">
+<meta property="og:image" content="https://aiagency777.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Custom Builds — AI &amp; Workflow Engineering">
+<meta name="twitter:description" content="When standard apps say 'that's impossible,' we build the engineering that does it. Micro-builds from $3,500, and you own the code.">
+<meta name="twitter:image" content="https://aiagency777.com/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root{
+  --abyss:#06171C;      /* page  */
+  --hull:#0C2830;       /* panel */
+  --hull-2:#123840;     /* raised panel */
+  --gulf:#22C3B0;       /* primary accent — gulf water */
+  --signal:#FFC93C;     /* secondary accent — channel marker buoy */
+  --shell:#E7EEEC;      /* primary text */
+  --mist:#89A6A6;       /* muted text */
+  --rule:rgba(137,166,166,.20);
+  --rule-hot:rgba(34,195,176,.45);
+
+  --display:'Archivo Black', system-ui, sans-serif;
+  --body:'IBM Plex Sans', system-ui, sans-serif;
+  --mono:'IBM Plex Mono', ui-monospace, monospace;
+
+  --wrap:1180px;
+  --gap:clamp(56px, 8vw, 112px);
+}
+
+*{box-sizing:border-box; margin:0; padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--abyss);
+  color:var(--shell);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+.wrap{max-width:var(--wrap); margin:0 auto; padding:0 24px}
+
+/* utility type */
+.mono{
+  font-family:var(--mono);
+  font-size:12px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--gulf);
+}
+h1,h2,h3{font-family:var(--display); font-weight:400; line-height:1.02; letter-spacing:-.015em}
+a{color:inherit; text-decoration:none}
+
+:focus-visible{outline:2px solid var(--signal); outline-offset:3px; border-radius:2px}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+header{
+  position:sticky; top:0; z-index:60;
+  background:rgba(6,23,28,.82);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--rule);
+}
+.bar{
+  display:flex; align-items:center; justify-content:space-between;
+  height:68px;
+}
+.brand{display:flex; align-items:center; gap:12px; text-decoration:none}
+
+/* ---- MECHANICAL REELS ----
+   Three machined reels in a dark housing. Gold sevens.
+   The strip RESTS on 7 — the spin is animation layered on top,
+   so with motion disabled the mark still reads 777.          */
+.reels{
+  display:flex; gap:2px;
+  padding:3px;
+  background:#041216;
+  border:1px solid var(--rule-hot);
+}
+.reel{
+  width:15px; height:22px;
+  overflow:hidden;
+  position:relative;
+  background:linear-gradient(180deg,#1B4750 0%,#0A2830 48%,#1B4750 100%);
+}
+.reel::after{  /* detent — where the reel stops */
+  content:''; position:absolute; left:0; right:0; top:50%; height:1px;
+  background:rgba(255,255,255,.10); pointer-events:none;
+}
+.strip{
+  display:flex; flex-direction:column;
+  transform:translateY(-154px);   /* rests on the final 7 */
+}
+.strip span{
+  height:22px; flex:none;
+  display:grid; place-items:center;
+  font-family:var(--mono); font-size:13px; font-weight:500;
+  color:#4E7078;
+}
+.strip span:last-child{
+  color:var(--signal);           /* gold */
+  text-shadow:0 0 8px rgba(255,201,60,.55);
+}
+@keyframes reelspin{ from{transform:translateY(0)} to{transform:translateY(-154px)} }
+.brand.spin .reel:nth-child(1) .strip{animation:reelspin .78s cubic-bezier(.28,.9,.24,1) both}
+.brand.spin .reel:nth-child(2) .strip{animation:reelspin .98s cubic-bezier(.28,.9,.24,1) both}
+.brand.spin .reel:nth-child(3) .strip{animation:reelspin 1.20s cubic-bezier(.28,.9,.24,1) both}
+.brand:hover .reels{box-shadow:0 0 18px -3px rgba(255,201,60,.5); border-color:var(--signal)}
+.reels{transition:box-shadow .35s ease, border-color .35s ease}
+
+.brand-name{font-family:var(--display); font-size:16px; letter-spacing:.01em}
+.brand-name em{font-style:normal; color:var(--gulf)}
+
+nav{display:flex; align-items:center; gap:30px}
+nav a{
+  font-size:14px; text-decoration:none; color:var(--mist);
+  transition:color .18s;
+}
+nav a:hover{color:var(--shell)}
+
+.btn{
+  display:inline-block;
+  font-family:var(--mono); font-size:12px; font-weight:500;
+  letter-spacing:.12em; text-transform:uppercase;
+  padding:12px 20px;
+  text-decoration:none;
+  border:1px solid var(--gulf);
+  color:var(--abyss); background:var(--gulf);
+  cursor:pointer;
+  transition:transform .16s, box-shadow .16s;
+}
+.btn:hover{transform:translateY(-2px); box-shadow:0 6px 0 -2px rgba(34,195,176,.35)}
+.btn-ghost{background:transparent; color:var(--gulf)}
+.btn-ghost:hover{background:rgba(34,195,176,.10); box-shadow:none; transform:none}
+
+@media(max-width:860px){ nav .nav-link{display:none} }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{padding:clamp(56px,7vw,92px) 0 var(--gap); position:relative}
+/* faint depth-sounding gradient — reads as water, not decoration */
+.hero::before{
+  content:''; position:absolute; inset:0; z-index:-1;
+  background:
+    radial-gradient(900px 420px at 82% -8%, rgba(34,195,176,.13), transparent 62%),
+    radial-gradient(700px 380px at 8% 8%, rgba(255,201,60,.055), transparent 60%);
+  pointer-events:none;
+}
+.eyebrow{display:flex; align-items:center; gap:12px; margin-bottom:26px}
+.eyebrow .dash{width:34px; height:1px; background:var(--gulf)}
+
+h1{
+  font-size:clamp(38px, 6.2vw, 74px);
+  max-width:16ch;
+  margin-bottom:26px;
+}
+h1 .accent{color:var(--gulf)}
+.lede{
+  font-size:clamp(17px,1.9vw,20px);
+  color:var(--mist);
+  max-width:56ch;
+  margin-bottom:34px;
+}
+.lede strong{color:var(--shell); font-weight:600}
+.hero-cta{display:flex; flex-wrap:wrap; gap:14px}
+
+/* ============================================================
+   SIGNATURE ELEMENT — THE CONSOLE
+   ============================================================ */
+.console{
+  margin-top:64px;
+  border:1px solid var(--rule-hot);
+  background:linear-gradient(180deg, var(--hull) 0%, #081F26 100%);
+  box-shadow:0 24px 70px -30px rgba(0,0,0,.9), inset 0 1px 0 rgba(255,255,255,.05);
+}
+.console-head{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:16px; flex-wrap:wrap;
+  padding:15px 20px;
+  border-bottom:1px solid var(--rule);
+  background:rgba(255,255,255,.02);
+}
+.console-title{
+  font-family:var(--mono); font-size:12px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--shell);
+}
+.console-status{
+  display:flex; align-items:center; gap:9px;
+  font-family:var(--mono); font-size:11px; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--mist);
+}
+.led{
+  width:8px; height:8px; border-radius:50%;
+  background:var(--gulf); box-shadow:0 0 0 0 rgba(34,195,176,.6);
+  animation:pulse 2.4s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(34,195,176,.55)}
+  70%{box-shadow:0 0 0 9px rgba(34,195,176,0)}
+  100%{box-shadow:0 0 0 0 rgba(34,195,176,0)}
+}
+
+.channels{display:grid; grid-template-columns:repeat(3,1fr)}
+@media(max-width:820px){ .channels{grid-template-columns:1fr} }
+
+.channel{
+  padding:30px 24px 26px;
+  border-right:1px solid var(--rule);
+  display:flex; flex-direction:column;
+  position:relative;
+  transition:background .2s;
+}
+.channel:last-child{border-right:none}
+@media(max-width:820px){
+  .channel{border-right:none; border-bottom:1px solid var(--rule)}
+  .channel:last-child{border-bottom:none}
+}
+.channel:hover{background:rgba(34,195,176,.045)}
+.channel.is-live{background:rgba(34,195,176,.09)}
+
+.ch-code{
+  font-family:var(--mono); font-size:11px; letter-spacing:.16em;
+  color:var(--signal); margin-bottom:16px;
+}
+.ch-name{
+  font-family:var(--display); font-size:22px; line-height:1.15;
+  margin-bottom:10px;
+}
+.ch-desc{font-size:14.5px; color:var(--mist); margin-bottom:22px; flex:1}
+.ch-desc b{color:var(--shell); font-weight:600}
+
+/* the press-to-talk control */
+.talk{
+  display:flex; align-items:center; gap:12px;
+  width:100%;
+  padding:13px 16px;
+  background:transparent;
+  border:1px solid var(--gulf);
+  color:var(--gulf);
+  font-family:var(--mono); font-size:11.5px; font-weight:500;
+  letter-spacing:.12em; text-transform:uppercase;
+  cursor:pointer;
+  transition:background .18s, color .18s;
+}
+.talk:hover{background:var(--gulf); color:var(--abyss)}
+.talk.is-live{background:var(--signal); border-color:var(--signal); color:var(--abyss)}
+
+/* audio bars — only animate when a channel is live */
+.bars{display:flex; align-items:flex-end; gap:2px; height:13px; flex:none}
+.bars i{width:2.5px; height:3px; background:currentColor; display:block}
+.talk.is-live .bars i{animation:eq .75s ease-in-out infinite}
+.talk.is-live .bars i:nth-child(2){animation-delay:.14s}
+.talk.is-live .bars i:nth-child(3){animation-delay:.28s}
+.talk.is-live .bars i:nth-child(4){animation-delay:.42s}
+@keyframes eq{0%,100%{height:3px} 50%{height:13px}}
+
+.console-foot{
+  padding:13px 20px;
+  border-top:1px solid var(--rule);
+  font-family:var(--mono); font-size:11px; letter-spacing:.08em;
+  color:var(--mist);
+  background:rgba(0,0,0,.22);
+}
+
+/* ============================================================
+   THE FIELD — a living background
+   A sparse voxel lattice drifting behind everything, plasma-lit
+   and coupled to scroll. This is the answer to "no stock photos":
+   an automation agency's background should look like a system
+   running, not like a man in a headset pointing at a hologram.
+   Created in JS — without it the page is simply dark, not broken.
+   ============================================================ */
+#field{
+  position:fixed; inset:0; z-index:-2;
+  pointer-events:none;
+  opacity:.85;
+}
+#field canvas{display:block; width:100%; height:100%}
+
+#wash{
+  position:fixed; inset:0; z-index:-3; pointer-events:none;
+  background:
+    radial-gradient(760px 620px at 78% 12%, rgba(34,195,176,.16), transparent 62%),
+    radial-gradient(680px 560px at 12% 78%, rgba(255,201,60,.07), transparent 60%);
+  transition:opacity .9s ease;
+  will-change:transform, opacity;
+  animation:breathe 7s ease-in-out infinite;
+}
+/* The wash inhales and exhales. Slow — 7s — so it reads as a
+   system idling, not as something blinking for attention. */
+@keyframes breathe{
+  0%,100%{ opacity:.75; transform:scale(1) }
+  50%    { opacity:1;   transform:scale(1.06) }
+}
+body{position:relative}
+
+/* ---- SERVICE ICONS ----
+   Vector, not raster: crisp on every display, zero HTTP requests,
+   and they inherit the palette for free. ---- */
+/* The cell is a two-column instrument label: the words carry the
+   meaning, the mark carries the recognition. Grid placement means
+   the HTML never had to change — the icon simply moves. */
+.cell{
+  display:grid;
+  grid-template-columns:1fr auto;
+  column-gap:20px;
+  align-items:start;
+}
+.cell .code{grid-column:1; grid-row:1; margin-bottom:12px}
+.cell h3   {grid-column:1; grid-row:2}
+.cell p    {grid-column:1; grid-row:3}
+.cell .ico{
+  grid-column:2; grid-row:1 / span 3;
+  align-self:center; justify-self:end;
+  width:62px; height:62px; margin:0;
+  color:var(--mist); opacity:.5;
+  transition:color .35s ease, opacity .35s ease,
+             transform .5s cubic-bezier(.16,1,.3,1);
+}
+.ico svg{width:100%; height:100%; display:block; overflow:visible}
+.cell:hover .ico{
+  color:var(--gulf); opacity:1;
+  transform:translateY(-4px) scale(1.08) rotate(-2deg);
+}
+.cell:hover .ico svg{filter:drop-shadow(0 0 14px rgba(34,195,176,.6))}
+@media(max-width:560px){
+  .cell .ico{width:48px; height:48px}
+}
+
+/* ---- SECTION PLATES ----
+   Where a photograph goes, once you have one worth using.
+   Set --img on a .plate and it renders behind that section,
+   desaturated and dimmed so the copy stays readable.
+   Leave it unset and the field simply shows through. ---- */
+.plate{
+  position:absolute; inset:0; z-index:-1;
+  pointer-events:none; overflow:hidden;
+}
+.plate::before{
+  content:''; position:absolute; inset:0;
+  background-image:var(--img, none);
+  background-size:cover; background-position:center;
+  opacity:.18; filter:grayscale(1) contrast(1.15);
+}
+.plate::after{
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(180deg, var(--abyss) 0%, rgba(6,23,28,.5) 42%, var(--abyss) 100%);
+}
+section, .coverage{position:relative}
+
+/* ============================================================
+   CAPABILITY BOARD
+   ============================================================ */
+section{padding:var(--gap) 0}
+.sec-head{margin-bottom:46px; max-width:60ch}
+.sec-head h2{font-size:clamp(28px,3.6vw,42px); margin:16px 0 14px}
+.sec-head p{color:var(--mist)}
+
+.board{
+  border:1px solid var(--rule);
+  display:grid; grid-template-columns:repeat(3,1fr);
+}
+@media(max-width:900px){ .board{grid-template-columns:repeat(2,1fr)} }
+@media(max-width:560px){ .board{grid-template-columns:1fr} }
+
+.cell{
+  padding:26px 24px;
+  border-right:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  transition:background .2s;
+}
+.cell:hover{background:var(--hull)}
+.cell .code{
+  font-family:var(--mono); font-size:11px; letter-spacing:.14em;
+  color:var(--mist); display:block; margin-bottom:12px;
+}
+.cell h3{font-size:17px; font-family:var(--body); font-weight:600; margin-bottom:7px; letter-spacing:0}
+.cell p{font-size:14px; color:var(--mist); line-height:1.5}
+.cell:hover .code{color:var(--signal)}
+
+/* ============================================================
+   HOW IT WORKS — a real sequence, so numbers are honest here
+   ============================================================ */
+.steps{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule)}
+@media(max-width:800px){ .steps{grid-template-columns:1fr} }
+.step{background:var(--abyss); padding:34px 26px}
+.step .num{
+  font-family:var(--display); font-size:44px; color:var(--hull-2);
+  line-height:1; margin-bottom:16px; display:block;
+}
+.step h3{font-size:19px; margin-bottom:9px}
+.step p{font-size:14.5px; color:var(--mist)}
+
+/* ============================================================
+   COVERAGE
+   ============================================================ */
+.coverage{
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  background:linear-gradient(90deg, rgba(34,195,176,.05), transparent 70%);
+  padding:38px 0;
+}
+.towns{display:flex; flex-wrap:wrap; gap:10px; margin-top:18px}
+.town{
+  font-family:var(--mono); font-size:12px; letter-spacing:.1em;
+  text-transform:uppercase;
+  padding:8px 14px;
+  border:1px solid var(--rule);
+  color:var(--mist);
+  transition:border-color .18s, color .18s;
+}
+.town:hover{border-color:var(--gulf); color:var(--shell)}
+
+/* ============================================================
+   CONTACT
+   ============================================================ */
+.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start}
+@media(max-width:880px){ .contact-grid{grid-template-columns:1fr; gap:44px} }
+
+form{display:grid; gap:16px}
+label{
+  font-family:var(--mono); font-size:11px; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--mist); display:block; margin-bottom:7px;
+}
+input,textarea,select{
+  width:100%;
+  background:var(--hull);
+  border:1px solid var(--rule);
+  color:var(--shell);
+  font-family:var(--body); font-size:15px;
+  padding:13px 14px;
+  transition:border-color .18s;
+}
+input:focus,textarea:focus,select:focus{border-color:var(--gulf); outline:none}
+textarea{min-height:110px; resize:vertical}
+.form-note{font-size:13px; color:var(--mist)}
+.form-msg{font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; min-height:18px}
+.form-msg.ok{color:var(--gulf)}
+.form-msg.err{color:var(--signal)}
+
+.contact-copy h2{font-size:clamp(28px,3.6vw,42px); margin:16px 0 18px}
+.contact-copy p{color:var(--mist); margin-bottom:26px}
+.direct{border-top:1px solid var(--rule); padding-top:22px}
+.direct dt{font-family:var(--mono); font-size:11px; letter-spacing:.13em; text-transform:uppercase; color:var(--mist); margin-bottom:5px}
+.direct dd{margin-bottom:18px; font-size:16px}
+.direct a{color:var(--gulf); text-decoration:none}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{border-top:1px solid var(--rule); padding:40px 0}
+.foot{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap}
+.foot p{font-family:var(--mono); font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--mist)}
+
+/* ============================================================
+   MOTION SYSTEM
+   The console metaphor drives every effect: a scanning light
+   passing over an instrument panel. One idea, applied
+   consistently — not six unrelated tricks.
+   ============================================================ */
+
+/* --- 1. SONAR CURSOR — a light that tracks the pointer across
+       panel surfaces. This is the signature interaction. --- */
+.cell, .channel, .step{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+}
+.cell::before, .channel::before, .step::before{
+  content:'';
+  position:absolute; inset:0; z-index:-1;
+  background:radial-gradient(
+    260px circle at var(--mx,50%) var(--my,50%),
+    rgba(34,195,176,.15),
+    transparent 68%
+  );
+  opacity:0;
+  transition:opacity .35s ease;
+}
+.cell:hover::before, .channel:hover::before, .step:hover::before{opacity:1}
+
+/* --- 2. TRACE LINE — a hairline that draws itself along the
+       leading edge, like a circuit energizing. --- */
+.cell::after, .step::after{
+  content:'';
+  position:absolute; left:0; top:0; bottom:0;
+  width:2px;
+  background:linear-gradient(180deg, var(--gulf), var(--signal));
+  transform:scaleY(0);
+  transform-origin:top;
+  transition:transform .42s cubic-bezier(.16,1,.3,1);
+}
+.cell:hover::after, .step:hover::after{transform:scaleY(1)}
+
+.cell{transition:background .3s ease, transform .3s cubic-bezier(.16,1,.3,1)}
+.cell:hover{transform:translateY(-3px)}
+.cell h3{transition:color .25s ease, transform .35s cubic-bezier(.16,1,.3,1)}
+.cell:hover h3{color:var(--gulf); transform:translateX(5px)}
+.cell .code{transition:color .25s ease, letter-spacing .35s ease}
+.cell:hover .code{color:var(--signal); letter-spacing:.2em}
+.cell p{transition:color .25s ease}
+.cell:hover p{color:var(--shell)}
+
+/* --- 3. STEP NUMERALS — the ghost numeral lights up and
+       drifts, so the sequence feels like it's advancing. --- */
+.step .num{transition:color .35s ease, transform .45s cubic-bezier(.16,1,.3,1)}
+.step:hover .num{color:var(--gulf); transform:translateX(6px)}
+.step h3{transition:color .3s ease}
+.step:hover h3{color:var(--signal)}
+
+/* --- 4. BUTTON WIPE — the fill sweeps in rather than
+       snapping. Applied to the ghost/outline button. --- */
+.btn{position:relative; overflow:hidden; z-index:1}
+.btn::before{
+  content:'';
+  position:absolute; inset:0; z-index:-1;
+  background:var(--gulf);
+  transform:translateX(-101%);
+  transition:transform .4s cubic-bezier(.16,1,.3,1);
+}
+.btn-ghost:hover{background:transparent; color:var(--abyss)}
+.btn-ghost:hover::before{transform:translateX(0)}
+
+/* --- 5. TALK CONTROL — border energizes, label nudges,
+       equalizer bars wake up on hover before going live. --- */
+.talk{
+  position:relative; overflow:hidden;
+  transition:background .22s ease, color .22s ease,
+             letter-spacing .3s ease, box-shadow .3s ease;
+}
+.talk:hover{
+  letter-spacing:.16em;
+  box-shadow:0 0 22px -4px rgba(34,195,176,.55);
+}
+.talk .talk-label{transition:transform .3s cubic-bezier(.16,1,.3,1)}
+.talk:hover .talk-label{transform:translateX(3px)}
+.talk:hover .bars i{animation:eq .95s ease-in-out infinite}
+.talk:hover .bars i:nth-child(2){animation-delay:.12s}
+.talk:hover .bars i:nth-child(3){animation-delay:.24s}
+.talk:hover .bars i:nth-child(4){animation-delay:.36s}
+
+/* --- 6. CHANNEL CARDS — lift, and the channel code brightens
+       like a switchboard lamp coming on. --- */
+.channel{transition:background .28s ease, transform .35s cubic-bezier(.16,1,.3,1)}
+.channel:hover{transform:translateY(-2px)}
+.channel .ch-code{transition:color .28s ease, letter-spacing .35s ease}
+.channel:hover .ch-code{letter-spacing:.22em}
+.channel .ch-name{transition:color .28s ease}
+.channel:hover .ch-name{color:var(--gulf)}
+
+/* --- 7. TOWN CHIPS — fill from the bottom, like a tide
+       coming in. Small joke, appropriate to the coast. --- */
+.town{
+  position:relative; overflow:hidden; z-index:1;
+  transition:color .28s ease, border-color .28s ease, transform .3s cubic-bezier(.16,1,.3,1);
+}
+.town::before{
+  content:'';
+  position:absolute; inset:0; z-index:-1;
+  background:var(--gulf);
+  transform:translateY(101%);
+  transition:transform .35s cubic-bezier(.16,1,.3,1);
+}
+.town:hover{color:var(--abyss); border-color:var(--gulf); transform:translateY(-3px)}
+.town:hover::before{transform:translateY(0)}
+
+/* --- 8. NAV — underline draws left to right. --- */
+nav .nav-link{position:relative; padding-bottom:3px}
+nav .nav-link::after{
+  content:'';
+  position:absolute; left:0; right:0; bottom:0; height:1px;
+  background:var(--gulf);
+  transform:scaleX(0); transform-origin:left;
+  transition:transform .32s cubic-bezier(.16,1,.3,1);
+}
+nav .nav-link:hover::after{transform:scaleX(1)}
+
+/* --- 9. BRAND — the reels respin on hover (see reel block above). --- */
+
+/* --- 10. FORM — fields glow when focused, like an
+        instrument accepting input. --- */
+input,textarea,select{transition:border-color .25s ease, box-shadow .3s ease, background .25s ease}
+input:hover,textarea:hover,select:hover{border-color:var(--rule-hot)}
+input:focus,textarea:focus,select:focus{
+  box-shadow:0 0 0 3px rgba(34,195,176,.13);
+  background:var(--hull-2);
+}
+
+.direct a{position:relative}
+.direct a::after{
+  content:''; position:absolute; left:0; right:0; bottom:-2px; height:1px;
+  background:var(--signal);
+  transform:scaleX(0); transform-origin:left;
+  transition:transform .3s cubic-bezier(.16,1,.3,1);
+}
+.direct a:hover{text-decoration:none; color:var(--signal)}
+.direct a:hover::after{transform:scaleX(1)}
+
+/* --- 11. SCROLL REVEAL — content surfaces as you descend,
+        which suits a page about depth. Restrained: 1 move. --- */
+.reveal{
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1);
+}
+.reveal.in{opacity:1; transform:none}
+
+/* ============================================================
+   DEREZZ — the boot sequence
+   A field of plasma voxels resolves out of the dark, holds,
+   then disintegrates from the centre outward to reveal the page.
+   The overlay is created in JS, never in HTML — so a visitor
+   with no JS gets the site immediately, uncovered.
+   ============================================================ */
+#derezz{
+  position:fixed; inset:0; z-index:9999;
+  background:var(--abyss);
+  cursor:pointer;
+  transition:opacity .6s ease;
+}
+#derezz.done{opacity:0; pointer-events:none}
+#derezz canvas{display:block; width:100%; height:100%}
+
+.skip-hint{
+  position:absolute; left:0; right:0; bottom:36px;
+  text-align:center;
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.24em;
+  text-transform:uppercase; color:rgba(137,166,166,.45);
+  pointer-events:none;
+  animation:hintfade 2.4s ease-in-out infinite;
+}
+@keyframes hintfade{0%,100%{opacity:.35} 50%{opacity:.8}}
+
+/* ============================================================
+   ELECTRIFICATION — the beat after the derezz
+   Every visible element stutters as current reaches it, then
+   settles. Deliberately NOT a strobe: opacity dips plus a glow,
+   never black-to-white, and each element runs on its own random
+   delay so the screen never flashes as one surface. That is the
+   difference between "electrical" and "seizure risk".
+   ============================================================ */
+@keyframes zapA{
+  0%{opacity:1}      5%{opacity:.32}   8%{opacity:1}
+  15%{opacity:.55}  18%{opacity:1}    34%{opacity:.4}
+  38%{opacity:1}    56%{opacity:.78}  60%{opacity:1}
+  100%{opacity:1}
+}
+@keyframes zapB{
+  0%{opacity:1}     10%{opacity:.5}   13%{opacity:1}
+  22%{opacity:.28}  27%{opacity:1}    44%{opacity:.7}
+  47%{opacity:1}    68%{opacity:.86}  71%{opacity:1}
+  100%{opacity:1}
+}
+@keyframes zapC{
+  0%{opacity:1}      7%{opacity:.66}  11%{opacity:1}
+  29%{opacity:.36}  33%{opacity:1}    41%{opacity:.8}
+  45%{opacity:1}    62%{opacity:.5}   66%{opacity:1}
+  100%{opacity:1}
+}
+/* the glow rides on top — this is what sells it as current,
+   rather than a page that is simply broken */
+@keyframes arcglow{
+  0%,100%{ text-shadow:none; box-shadow:none }
+  12%{ text-shadow:0 0 12px rgba(34,195,176,.9), 0 0 3px rgba(255,255,255,.7) }
+  30%{ text-shadow:0 0 7px rgba(255,201,60,.75) }
+  55%{ text-shadow:0 0 14px rgba(34,195,176,.6) }
+  80%{ text-shadow:0 0 4px rgba(255,201,60,.4) }
+}
+.zap{ will-change:opacity }
+.zap.a{ animation:zapA 1.9s steps(60,end) var(--zd,0s) both, arcglow 1.9s ease-out var(--zd,0s) both }
+.zap.b{ animation:zapB 2.1s steps(60,end) var(--zd,0s) both, arcglow 2.1s ease-out var(--zd,0s) both }
+.zap.c{ animation:zapC 1.7s steps(60,end) var(--zd,0s) both, arcglow 1.7s ease-out var(--zd,0s) both }
+
+/* the switchboard LED takes the charge hardest — it is the only
+   thing on the page that is actually powered */
+.led.hot{ box-shadow:0 0 26px 5px rgba(34,195,176,.95) !important }
+
+/* Content waits behind the derezz, then rises into place. */
+.booting header, .booting main, .booting footer{opacity:0; transform:translateY(16px)}
+.booted  header, .booted  main, .booted  footer{
+  opacity:1; transform:none;
+  transition:opacity .85s cubic-bezier(.16,1,.3,1),
+             transform .85s cubic-bezier(.16,1,.3,1);
+}
+.booted main  {transition-delay:.08s}
+.booted footer{transition-delay:.16s}
+
+/* ============================================================
+   ACCESSIBILITY — everything above is decoration.
+   If motion is unwelcome, none of it runs.
+   ============================================================ */
+@media(prefers-reduced-motion:reduce){
+  *{animation:none !important; transition:none !important; scroll-behavior:auto !important}
+  .reveal{opacity:1 !important; transform:none !important}
+  #derezz{display:none !important}
+  #field,#wash{display:none !important}
+  .zap{animation:none !important; opacity:1 !important; text-shadow:none !important}
+  .booting header,.booting main,.booting footer{opacity:1 !important; transform:none !important}
+  .cell::before,.channel::before,.step::before{display:none}
+}
+
+/* Touch devices get no hover states — don't leave them stuck on */
+@media(hover:none){
+  .cell::before,.channel::before,.step::before{display:none}
+}
+
+/* ============================================================
+   PAGE ADDITIONS — email & SMS service page
+   Everything below reuses the tokens declared above. No new
+   colours, no new type families: the page has to look like it
+   was cut from the same sheet metal as the homepage.
+   ============================================================ */
+
+/* ---- shared small pieces ---- */
+.sub{font-size:clamp(20px,2.4vw,26px); font-family:var(--display); margin:0 0 14px}
+.note{
+  font-family:var(--mono); font-size:11px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--mist);
+}
+.rule-top{border-top:1px solid var(--rule); padding-top:26px; margin-top:34px}
+
+/* ---- CHANNEL SPLIT: email column / sms column ---- */
+.split{
+  display:grid; grid-template-columns:1fr 1fr; gap:1px;
+  background:var(--rule); border:1px solid var(--rule);
+}
+@media(max-width:860px){ .split{grid-template-columns:1fr} }
+.lane{background:var(--abyss); padding:34px 28px}
+.lane-head{display:flex; align-items:center; gap:14px; margin-bottom:8px}
+.lane-head .ico{width:34px; height:34px; color:var(--gulf); flex:none}
+.lane-head .ico svg{width:100%; height:100%; display:block}
+.lane h3{font-size:22px; margin:0}
+.lane > p{color:var(--mist); font-size:15px; margin:10px 0 24px}
+.lane ul{list-style:none; display:grid; gap:0}
+.lane li{
+  padding:14px 0; border-top:1px solid var(--rule);
+  font-size:14.5px; line-height:1.55;
+}
+.lane li b{
+  display:block; color:var(--shell); font-weight:600;
+  font-size:15px; margin-bottom:3px;
+}
+.lane li span{color:var(--mist)}
+.lane li .tag{
+  display:inline-block; font-family:var(--mono); font-size:10px;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--signal);
+  border:1px solid var(--rule); padding:2px 7px; margin-left:8px;
+  vertical-align:middle;
+}
+
+/* ---- BENCHMARK STRIP: the numbers, stated flat ---- */
+.metrics{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+  background:var(--rule); border:1px solid var(--rule);
+}
+@media(max-width:900px){ .metrics{grid-template-columns:repeat(2,1fr)} }
+@media(max-width:480px){ .metrics{grid-template-columns:1fr} }
+.metric{background:var(--abyss); padding:26px 22px; transition:background .25s}
+.metric:hover{background:var(--hull)}
+.metric .fig{
+  font-family:var(--display); font-size:clamp(30px,4vw,42px);
+  color:var(--gulf); line-height:1; display:block; margin-bottom:10px;
+}
+.metric .lbl{font-size:14px; color:var(--shell); display:block; margin-bottom:6px}
+.metric .src{font-family:var(--mono); font-size:10px; letter-spacing:.1em; color:var(--mist); text-transform:uppercase}
+
+/* ---- DATA TABLE — deliberately plain. Numbers do the talking ---- */
+.tbl-wrap{border:1px solid var(--rule); overflow-x:auto}
+table{width:100%; border-collapse:collapse; font-size:14.5px; min-width:560px}
+caption{
+  text-align:left; padding:16px 20px; border-bottom:1px solid var(--rule);
+  font-family:var(--mono); font-size:11px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--gulf); background:rgba(255,255,255,.02);
+}
+th,td{padding:13px 20px; text-align:left; border-bottom:1px solid var(--rule); vertical-align:top}
+thead th{
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--mist); font-weight:400;
+}
+tbody tr:last-child th, tbody tr:last-child td{border-bottom:none}
+tbody th{font-weight:600; color:var(--shell); font-family:var(--body); font-size:14.5px}
+td.num{font-family:var(--mono); color:var(--gulf); white-space:nowrap}
+td.mut{color:var(--mist)}
+tbody tr{transition:background .2s}
+tbody tr:hover{background:rgba(34,195,176,.045)}
+
+/* ---- WHITE PAPERS ---- */
+.papers{display:grid; gap:22px}
+.paper{
+  border:1px solid var(--rule);
+  background:linear-gradient(180deg, var(--hull) 0%, #081F26 100%);
+  transition:border-color .3s ease, transform .35s cubic-bezier(.16,1,.3,1);
+}
+.paper:hover{border-color:var(--rule-hot); transform:translateY(-3px)}
+.paper-head{
+  display:flex; justify-content:space-between; align-items:flex-start;
+  gap:18px; flex-wrap:wrap;
+  padding:22px 26px; border-bottom:1px solid var(--rule);
+}
+.paper-head h3{font-size:20px; margin:8px 0 0; font-family:var(--display)}
+.paper-id{font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--signal)}
+.paper-body{padding:26px}
+.paper-body > p{color:var(--mist); font-size:15px; margin-bottom:22px}
+.pf{
+  display:grid; grid-template-columns:repeat(4,1fr); gap:1px;
+  background:var(--rule); border:1px solid var(--rule); margin-bottom:22px;
+}
+@media(max-width:760px){ .pf{grid-template-columns:repeat(2,1fr)} }
+.pf > div{background:#071D23; padding:18px 16px}
+.pf dt{font-family:var(--mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--mist); margin-bottom:7px}
+.pf dd{font-family:var(--mono); font-size:19px; color:var(--gulf); margin:0}
+.paper details{border-top:1px solid var(--rule); padding-top:16px}
+.paper summary{
+  cursor:pointer; list-style:none;
+  font-family:var(--mono); font-size:11px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--gulf);
+  display:flex; align-items:center; gap:10px;
+}
+.paper summary::-webkit-details-marker{display:none}
+.paper summary::before{content:'+'; font-size:15px; line-height:1}
+.paper details[open] summary::before{content:'\2212'}
+.paper summary:hover{color:var(--signal)}
+.paper details .inner{padding-top:16px; font-size:14px; color:var(--mist); line-height:1.65}
+.paper details .inner ol{margin:0 0 14px 18px; display:grid; gap:7px}
+.paper details .inner b{color:var(--shell)}
+
+/* ---- ROI CALCULATOR ---- */
+.calc{
+  border:1px solid var(--rule-hot);
+  background:linear-gradient(180deg, var(--hull) 0%, #081F26 100%);
+  box-shadow:0 24px 70px -34px rgba(0,0,0,.9);
+}
+.calc-head{
+  display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+  padding:15px 22px; border-bottom:1px solid var(--rule); background:rgba(255,255,255,.02);
+}
+.calc-grid{display:grid; grid-template-columns:1.05fr .95fr}
+@media(max-width:860px){ .calc-grid{grid-template-columns:1fr} }
+.calc-in{padding:28px 24px; border-right:1px solid var(--rule); display:grid; gap:18px; align-content:start}
+@media(max-width:860px){ .calc-in{border-right:none; border-bottom:1px solid var(--rule)} }
+.calc-out{padding:28px 24px; display:grid; align-content:start; gap:2px}
+.readout{border-bottom:1px solid var(--rule); padding:16px 0}
+.readout:last-of-type{border-bottom:none}
+.readout dt{font-family:var(--mono); font-size:10.5px; letter-spacing:.13em; text-transform:uppercase; color:var(--mist); margin-bottom:6px}
+.readout dd{font-family:var(--display); font-size:30px; color:var(--gulf); margin:0; line-height:1}
+.readout.hi dd{color:var(--signal)}
+.readout small{display:block; font-family:var(--body); font-size:12.5px; color:var(--mist); margin-top:7px; letter-spacing:0; text-transform:none}
+.calc-foot{
+  padding:14px 22px; border-top:1px solid var(--rule);
+  font-size:12.5px; color:var(--mist); background:rgba(0,0,0,.22);
+}
+
+/* ---- PRICING ---- */
+.tiers{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--rule); border:1px solid var(--rule)}
+@media(max-width:940px){ .tiers{grid-template-columns:1fr} }
+.tier{background:var(--abyss); padding:32px 26px 30px; display:flex; flex-direction:column; position:relative; transition:background .28s ease}
+.tier:hover{background:var(--hull)}
+.tier.featured{background:linear-gradient(180deg, var(--hull) 0%, #081F26 100%)}
+.tier.featured::before{
+  content:''; position:absolute; left:0; right:0; top:0; height:2px;
+  background:linear-gradient(90deg, var(--gulf), var(--signal));
+}
+.tier-flag{
+  position:absolute; top:0; right:0;
+  font-family:var(--mono); font-size:9.5px; letter-spacing:.16em; text-transform:uppercase;
+  background:var(--signal); color:var(--abyss); padding:5px 10px;
+}
+.tier-code{font-family:var(--mono); font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--mist); display:block; margin-bottom:12px}
+.tier h3{font-size:26px; margin-bottom:8px}
+.tier .who{font-size:13.5px; color:var(--mist); min-height:42px; margin-bottom:20px}
+.price{display:flex; align-items:flex-end; gap:8px; margin-bottom:4px}
+.price .amt{font-family:var(--display); font-size:42px; color:var(--shell); line-height:1}
+.price .per{font-family:var(--mono); font-size:11.5px; color:var(--mist); letter-spacing:.1em; padding-bottom:6px}
+.price-band{font-family:var(--mono); font-size:11px; color:var(--mist); letter-spacing:.06em; margin-bottom:16px}
+.setup{
+  border:1px solid var(--rule); padding:11px 14px; margin-bottom:22px;
+  display:flex; justify-content:space-between; gap:12px; align-items:center; flex-wrap:wrap;
+}
+.setup span{font-family:var(--mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--mist)}
+.setup b{font-family:var(--mono); font-size:15px; color:var(--signal); font-weight:500}
+.spec{list-style:none; display:grid; gap:0; margin-bottom:26px; flex:1}
+.spec li{
+  font-size:14px; line-height:1.5; padding:10px 0 10px 22px;
+  border-bottom:1px solid var(--rule); color:var(--mist); position:relative;
+}
+.spec li::before{
+  content:''; position:absolute; left:0; top:17px;
+  width:9px; height:1px; background:var(--gulf);
+}
+.spec li b{color:var(--shell); font-weight:600}
+.tier .btn{width:100%; text-align:center}
+
+.passthrough{
+  border:1px solid var(--rule); border-top:none;
+  padding:22px 24px; background:rgba(0,0,0,.22);
+  display:grid; grid-template-columns:repeat(3,1fr); gap:22px;
+}
+@media(max-width:820px){ .passthrough{grid-template-columns:1fr; gap:16px} }
+.passthrough dt{font-family:var(--mono); font-size:10.5px; letter-spacing:.13em; text-transform:uppercase; color:var(--signal); margin-bottom:6px}
+.passthrough dd{margin:0; font-size:13.5px; color:var(--mist); line-height:1.55}
+
+/* ---- COMPLIANCE ---- */
+.compliance{
+  border:1px solid var(--rule);
+  border-left:2px solid var(--signal);
+  background:rgba(255,201,60,.035);
+  padding:30px 28px;
+  display:grid; grid-template-columns:repeat(2,1fr); gap:26px 40px;
+}
+@media(max-width:820px){ .compliance{grid-template-columns:1fr} }
+.compliance h3{font-size:17px; font-family:var(--body); font-weight:600; margin-bottom:8px; letter-spacing:0}
+.compliance p{font-size:14px; color:var(--mist); line-height:1.6}
+
+/* ---- FAQ ---- */
+.faq{border:1px solid var(--rule)}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq details:last-child{border-bottom:none}
+.faq summary{
+  cursor:pointer; list-style:none; padding:20px 24px;
+  font-size:16px; font-weight:600; color:var(--shell);
+  display:flex; justify-content:space-between; align-items:center; gap:18px;
+  transition:background .2s, color .2s;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:'+'; font-family:var(--mono); color:var(--gulf); font-size:19px; flex:none}
+.faq details[open] summary{color:var(--gulf); background:rgba(34,195,176,.05)}
+.faq details[open] summary::after{content:'\2212'; color:var(--signal)}
+.faq summary:hover{background:var(--hull)}
+.faq .ans{padding:0 24px 22px; font-size:14.5px; color:var(--mist); line-height:1.65; max-width:80ch}
+.faq .ans a{color:var(--gulf)}
+
+/* ---- SOURCES ---- */
+.sources{font-size:12.5px; color:var(--mist); line-height:1.7}
+.sources h3{font-family:var(--mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gulf); margin-bottom:12px; font-weight:400}
+.sources ol{margin-left:18px; display:grid; gap:5px}
+.sources a{color:var(--mist); border-bottom:1px solid var(--rule)}
+.sources a:hover{color:var(--gulf); border-color:var(--rule-hot)}
+
+/* ---- CTA BAND ---- */
+.band{
+  border:1px solid var(--rule-hot);
+  background:linear-gradient(90deg, rgba(34,195,176,.09), rgba(255,201,60,.04) 70%, transparent);
+  padding:38px 32px;
+  display:flex; justify-content:space-between; align-items:center; gap:26px; flex-wrap:wrap;
+}
+.band h2{font-size:clamp(24px,3vw,34px); max-width:22ch}
+.band p{color:var(--mist); font-size:15px; margin-top:10px; max-width:52ch}
+
+/* reveal + trace treatment extended to the new panel types */
+.lane, .metric, .tier, .paper{position:relative; isolation:isolate; overflow:hidden}
+.tier::after, .lane::after{
+  content:''; position:absolute; left:0; top:0; bottom:0; width:2px;
+  background:linear-gradient(180deg, var(--gulf), var(--signal));
+  transform:scaleY(0); transform-origin:top;
+  transition:transform .42s cubic-bezier(.16,1,.3,1);
+}
+.tier:hover::after, .lane:hover::after{transform:scaleY(1)}
+@media(hover:none){ .tier::after, .lane::after{display:none} }
+
+/* ============================================================
+   CUSTOM BUILDS PAGE — additions on top of the shared sheet
+   ============================================================ */
+
+/* the whiteboard arrow: bottleneck -> engine -> hands-free */
+.flow-track.three{grid-template-columns:repeat(3,1fr); min-width:640px}
+.flow-track.three .node{padding:0 20px}
+.flow-track.three .dot{width:44px; height:44px; font-size:12px}
+.flow-track.three h4{font-size:12.5px; letter-spacing:.12em; margin-bottom:10px}
+.flow-track.three p{font-size:13px}
+.flow-track.three .node:nth-child(2) .dot{
+  border-color:var(--signal); color:var(--signal);
+  box-shadow:0 0 22px -5px rgba(255,201,60,.55);
+}
+.flow-track.three .node:nth-child(2):hover .dot{background:var(--signal); color:var(--abyss)}
+
+/* ---- THE OBJECTION BAND ----
+   Where the sales argument actually lives: the sentence a
+   prospect has already been told by somebody else.
+   ============================================================ */
+.quote-band{
+  border:1px solid var(--rule);
+  border-left:2px solid var(--gulf);
+  background:rgba(34,195,176,.04);
+  padding:34px 34px 30px;
+  margin-bottom:34px;
+}
+.quote-band blockquote{
+  font-family:var(--display); font-size:clamp(20px,2.8vw,30px);
+  line-height:1.15; letter-spacing:-.015em; color:var(--shell);
+  max-width:22ch; margin-bottom:18px;
+}
+.quote-band blockquote span{color:var(--mist)}
+.quote-band p{color:var(--mist); font-size:15px; max-width:62ch}
+.quote-band p b{color:var(--gulf); font-weight:600}
+
+/* ---- IP / OWNERSHIP CALLOUT ---- */
+.own{
+  border:1px solid var(--signal);
+  background:rgba(255,201,60,.05);
+  padding:26px 28px;
+  display:flex; align-items:center; gap:24px; flex-wrap:wrap;
+}
+.own .ico{width:42px; height:42px; color:var(--signal); flex:none}
+.own .ico svg{width:100%; height:100%; display:block}
+.own div{flex:1 1 340px}
+.own h3{font-size:19px; margin-bottom:8px}
+.own p{font-size:14.5px; color:var(--mist); line-height:1.6}
+.own p b{color:var(--shell)}
+
+/* ---- STAGE / TIMELINE MARKERS on the tier cards ---- */
+.tier .timeline{
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--mist);
+  border-top:1px solid var(--rule); padding-top:12px; margin-bottom:20px;
+}
+.tier .timeline b{color:var(--gulf); font-weight:500}
+</style>
+
+<!-- Structured data: service, offers, breadcrumb, FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://aiagency777.com/#organization",
+      "name": "AI Agency 777",
+      "url": "https://aiagency777.com/",
+      "email": "sales@aiagency777.com",
+      "telephone": "+1-850-684-4339",
+      "areaServed": { "@type": "Country", "name": "United States" }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://aiagency777.com/#website",
+      "url": "https://aiagency777.com/",
+      "name": "AI Agency 777",
+      "publisher": { "@id": "https://aiagency777.com/#organization" },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://aiagency777.com/custom-builds.html#webpage",
+      "url": "https://aiagency777.com/custom-builds.html",
+      "name": "Custom Builds — AI & Workflow Engineering",
+      "description": "Custom AI and workflow engineering for businesses that have outgrown off-the-shelf software: private AI models, mobile approval chains, legacy software bridges and bespoke automation.",
+      "isPartOf": { "@id": "https://aiagency777.com/#website" },
+      "about": { "@id": "https://aiagency777.com/custom-builds.html#service" },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://aiagency777.com/custom-builds.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aiagency777.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Custom Builds", "item": "https://aiagency777.com/custom-builds.html" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://aiagency777.com/custom-builds.html#service",
+      "name": "Custom AI & Workflow Engineering",
+      "serviceType": "Custom software and automation engineering",
+      "url": "https://aiagency777.com/custom-builds.html",
+      "provider": { "@id": "https://aiagency777.com/#organization" },
+      "description": "Bespoke automation engineering for workflows that off-the-shelf software cannot handle: AI models trained on your own rules and pricing logic, one-click mobile approval chains, custom Python and API bridges between legacy and cloud systems, and automated compliance and audit logging. Built in an isolated test environment, delivered with full code ownership.",
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "Growing businesses that have outgrown standard workflow apps and off-the-shelf software"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Custom engineering tiers",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Focused Micro-Build",
+            "description": "One specific bottleneck engineered out — a custom mobile approval chain, or a bridge between two systems that refuse to talk. Custom scripts and micro-services, isolated testing, full code ownership, plan-build-and-video-training delivery.",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": "3500",
+              "maxPrice": "7500",
+              "priceCurrency": "USD",
+              "valueAddedTaxIncluded": false,
+              "name": "One-time engineering fee"
+            },
+            "availability": "https://schema.org/InStock",
+            "url": "https://aiagency777.com/custom-builds.html#pricing"
+          },
+          {
+            "@type": "Offer",
+            "name": "Enterprise Custom Architecture",
+            "description": "Multi-department overhauls, private AI model builds and legacy system modernization. Enterprise APIs, full custom build and multi-system synchronization, isolated testing, full code ownership.",
+            "priceCurrency": "USD",
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": "10000",
+              "maxPrice": "25000",
+              "priceCurrency": "USD",
+              "valueAddedTaxIncluded": false,
+              "name": "One-time engineering fee, from"
+            },
+            "availability": "https://schema.org/InStock",
+            "url": "https://aiagency777.com/custom-builds.html#pricing"
+          },
+          {
+            "@type": "Offer",
+            "name": "Managed Systems Retainer",
+            "description": "Optional ongoing engagement: active system monitoring, continuous performance tuning, prompt updates, new feature additions, monthly efficiency audits and health checks, priority SLA and a dedicated tech lead.",
+            "priceCurrency": "USD",
+            "price": "1000",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "minPrice": "1000",
+              "maxPrice": "3000",
+              "priceCurrency": "USD",
+              "unitCode": "MON",
+              "billingIncrement": 1,
+              "referenceQuantity": { "@type": "QuantitativeValue", "value": 1, "unitCode": "MON" },
+              "name": "Per month, optional"
+            },
+            "availability": "https://schema.org/InStock",
+            "url": "https://aiagency777.com/custom-builds.html#pricing"
+          }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://aiagency777.com/custom-builds.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How is this different from Zapier or Make?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard workflow apps are excellent until your process stops looking standard. They struggle with conditional logic that runs several layers deep, with pricing or approval rules unique to your company, with systems that have no modern API, and with anything requiring real error handling. When you find yourself building workarounds for the workaround, you have outgrown the category. We pick up where those tools stop — using custom code, private AI models and secure data bridges to build automation around the way your business actually operates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does a custom build cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Focused Micro-Build that removes one specific bottleneck runs $3,500 to $7,500 one-time. Enterprise Custom Architecture covering multi-department overhauls, private AI model builds or legacy modernization runs $10,000 to $25,000 and up. An optional Managed Systems Retainer for monitoring, tuning and new features runs $1,000 to $3,000 per month. For context, published 2026 benchmarks put full custom software projects at $25,000 to $500,000 or more, with the Clutch verified project average at $132,480 over roughly 13 months. We are cheaper because we deliberately do not build platforms — we engineer the narrow piece that is actually costing you money."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who owns the code you write?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You do, entirely. Every script, model configuration, integration and piece of documentation is yours, delivered into your repositories and running on your infrastructure. There is no permanent developer lock-in and no license that expires if you stop paying us. The Managed Systems Retainer is optional for exactly this reason — if you want to take the build in-house, the handover is the plan, not a penalty."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What happens if bad data hits the system?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It gets flagged and you get alerted, rather than silently propagating through the pipeline. Every build ships with automatic fail-safes and error guardrails, because the dangerous failure in automation is never the process that stops — it is the one that keeps running and is quietly wrong. Anything the system cannot resolve confidently is routed to a person with the full context attached."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will you test this against my live operations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Everything is built and tested in an isolated sandbox environment first, using copies of your real records, so there is zero risk to daily operations while we work. We then run the new system in parallel with the existing manual process so you can compare outputs before you trust it. Cutover happens when you are satisfied, not when we are finished."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you work with our old industry-specific software?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually, yes. Legacy software that has no modern API still has a database, a file export, a print stream or a screen — and any one of those can become an integration point. This is the single most common reason businesses come to us, and published benchmarks reflect why: simple integrations with well-documented modern APIs add $2,000 to $10,000 to a project, while complex legacy enterprise integrations run $20,000 to $80,000 each. Scoping the connection properly before anyone writes code is what keeps that number down."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a custom build take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Focused Micro-Build typically runs two to four weeks from scoping call to live system. Enterprise Custom Architecture runs six to twelve weeks depending on how many systems are involved and how cooperative their interfaces are. Those timelines are short relative to the category — published industry data puts the typical full custom software delivery at around 13 months — because we are engineering a specific process rather than building a platform from the ground up."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M4GN4KB2"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+  <div class="wrap bar">
+    <a class="brand" id="brand" href="https://aiagency777.com/" aria-label="AI Agency 777 — home">
+      <span class="reels" aria-hidden="true">
+        <span class="reel"><span class="strip"><span>3</span><span>9</span><span>4</span><span>1</span><span>6</span><span>2</span><span>8</span><span>7</span></span></span>
+        <span class="reel"><span class="strip"><span>5</span><span>2</span><span>8</span><span>3</span><span>1</span><span>9</span><span>4</span><span>7</span></span></span>
+        <span class="reel"><span class="strip"><span>1</span><span>6</span><span>3</span><span>9</span><span>2</span><span>5</span><span>8</span><span>7</span></span></span>
+      </span>
+      <span class="brand-name">AI <em>AGENCY</em></span>
+    </a>
+    <nav>
+      <a class="nav-link" href="#build">What we build</a>
+      <a class="nav-link" href="#reliability">Reliability</a>
+      <a class="nav-link" href="#pricing">Investment</a>
+      <a class="nav-link" href="#calculator">The math</a>
+      <a class="btn" href="#contact">Book a call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ==================== HERO + CONSOLE ==================== -->
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">
+      <span class="dash"></span>
+      <span class="mono">SYS-12 &middot; Custom AI &amp; workflow engineering</span>
+    </div>
+
+    <h1>If it's repeatable, it's automatable. <span class="accent">Tell us the bottleneck.</span></h1>
+
+    <p class="lede">
+      Stop forcing your team to work around rigid software. We build the custom, behind-the-scenes
+      systems that eliminate your biggest operational headaches for good —
+      <strong>engineered around the exact way your business operates.</strong>
+    </p>
+
+    <div class="hero-cta">
+      <a class="btn" href="#pricing">See investment tiers</a>
+      <a class="btn btn-ghost" href="#calculator">Cost your bottleneck</a>
+    </div>
+
+    <!-- ---------- SIGNATURE: THE CONSOLE ---------- -->
+    <div class="console" id="channels">
+      <div class="console-head">
+        <span class="console-title">Engineering bay</span>
+        <span class="console-status"><span class="led"></span> 3 build classes</span>
+      </div>
+
+      <div class="channels">
+        <div class="channel">
+          <span class="ch-code">BLD-01 / Logic</span>
+          <h3 class="ch-name">Private AI models</h3>
+          <p class="ch-desc">AI trained on your company's own rules, pricing algorithms and internal paperwork — <b>not a generic assistant guessing at your business.</b></p>
+        </div>
+
+        <div class="channel">
+          <span class="ch-code">BLD-02 / Approvals</span>
+          <h3 class="ch-name">One-click sign-off chains</h3>
+          <p class="ch-desc">Details gathered automatically, then a clean Approve or Reject button on a manager's phone. <b>No email hunting, no chasing.</b></p>
+        </div>
+
+        <div class="channel">
+          <span class="ch-code">BLD-03 / Bridges</span>
+          <h3 class="ch-name">Legacy software bridges</h3>
+          <p class="ch-desc">Custom Python and API work that makes old industry programs share data with modern cloud platforms. <b>Even the ones with no API at all.</b></p>
+        </div>
+      </div>
+
+      <div class="console-foot">
+        Every build ships with fail-safes, sandbox testing before it touches production, and full code ownership. You keep what we make.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== THE OBJECTION ==================== -->
+<section id="wall">
+  <div class="plate"></div>
+  <div class="wrap">
+    <div class="quote-band">
+      <blockquote>&ldquo;<span>Sorry &mdash;</span> the software can't do that.&rdquo;</blockquote>
+      <p>Every growing business eventually hears that sentence. Your workflows get too specific for standard apps like Zapier or off-the-shelf software: you're copying data across five spreadsheets, waiting days for a manager to sign off, or trying to make a program from 2009 talk to a platform from last year. <b>When standard apps say that's impossible, we build custom engineering solutions.</b> Private AI models, custom code and secure data bridges, shaped around your operation instead of the other way round.</p>
+    </div>
+
+    <div class="flow">
+      <div class="flow-track three">
+        <div class="node">
+          <span class="dot">IN</span>
+          <h4>Your slow, manual bottleneck</h4>
+          <p>The process everybody complains about. If you can draw it on a whiteboard, it can be engineered.</p>
+        </div>
+        <div class="node">
+          <span class="dot">AI</span>
+          <h4>Custom AI &amp; automation engine</h4>
+          <p>Tailored logic, private models, real error handling, and bridges to every system involved.</p>
+        </div>
+        <div class="node">
+          <span class="dot">OUT</span>
+          <h4>Hands-free business process</h4>
+          <p>It runs unattended in the background. People only get involved when something genuinely needs judgement.</p>
+        </div>
+      </div>
+      <p class="flow-cap"><b style="color:var(--shell)">The test is simple.</b> If you can draw your business process on a whiteboard, we can build a system to run it automatically. If you can't draw it, that's the first thing we'll do together — and it's usually the moment people discover why the process was so hard to hand off.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== THE LEAKS ==================== -->
+<section id="leaks">
+  <div class="plate"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">The invisible leaks</span>
+      <h2>Your staff has become the human glue.</h2>
+      <p>When your software can't handle your unique business rules, people hold the gaps together by hand. It works — right up until the person holding it takes a week off, or leaves.</p>
+    </div>
+
+    <div class="board">
+      <div class="cell">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M3 14.5h18M9 9v11M15 9v11"/></svg></span>
+        <span class="code">LEAK-01</span>
+        <h3>Spreadsheet ecosystems</h3>
+        <p>Mission-critical information trapped in fragile, complex workbooks where one wrong click ruins the data — and one person understands the formulas.</p>
+      </div>
+      <div class="cell">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5.5l3.5 2"/></svg></span>
+        <span class="code">LEAK-02</span>
+        <h3>Approval traffic jams</h3>
+        <p>Quotes, invoices and project stages sitting on hold for days, waiting on a manual email sign-off from someone who has 400 unread messages.</p>
+      </div>
+      <div class="cell">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5" width="8" height="6" rx="1"/><rect x="13.5" y="13" width="8" height="6" rx="1"/><path d="M6.5 11v3.5M17.5 13V9.5"/><path d="M8.5 16H11M13 8h2.5"/></svg></span>
+        <span class="code">LEAK-03</span>
+        <h3>Disconnected legacy software</h3>
+        <p>Older, industry-specific programs that refuse to sync with your modern CRM or accounting tools — so a human moves the data across by hand, daily.</p>
+      </div>
+      <div class="cell">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.6L1.9 18a2 2 0 0 0 1.7 3h16.8a2 2 0 0 0 1.7-3L13.7 3.6a2 2 0 0 0-3.4 0z"/><path d="M12 9v4.5M12 17.5h.01"/></svg></span>
+        <span class="code">LEAK-04</span>
+        <h3>High-risk human error</h3>
+        <p>Complex, multi-step processes where one missed detail halts an entire project — and nobody finds out until a customer does.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TRANSFORMATION ==================== -->
+<section id="transformation" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">The transformation</span>
+      <h2>What life looks like after custom engineering.</h2>
+      <p>Four operating metrics, before and after. The right-hand column is what we design toward — the actual numbers depend on your process, and we'll model them honestly during scoping rather than promising them here.</p>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <caption>Operating metrics — manual drag vs. engineered</caption>
+        <thead>
+          <tr>
+            <th scope="col">Operating metric</th>
+            <th scope="col">The old way</th>
+            <th scope="col">The AI Agency 777 way</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Weekly admin overhead</th>
+            <td class="mut">15+ hours a week lost to manual data entry and copy-pasting</td>
+            <td class="num">Near zero &mdash; runs unattended in the background</td>
+          </tr>
+          <tr>
+            <th scope="row">Approval turnaround</th>
+            <td class="mut">Two to three days waiting on internal email chains</td>
+            <td class="num">Under 60 seconds via instant mobile alerts</td>
+          </tr>
+          <tr>
+            <th scope="row">System compatibility</th>
+            <td class="mut">Disconnected legacy software and isolated tools</td>
+            <td class="num">One unified pipeline where every system communicates</td>
+          </tr>
+          <tr>
+            <th scope="row">Data accuracy</th>
+            <td class="mut">Human mistakes, broken spreadsheets, lost leads</td>
+            <td class="num">Validated at every step &mdash; bad data flagged, never silently absorbed</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== WHAT WE BUILD ==================== -->
+<section id="build">
+  <div class="plate"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">What we build</span>
+      <h2>Four ways we take the bottleneck out.</h2>
+      <p>Most engagements combine two or three of these. The scoping call exists to work out which — and, just as often, to tell you that an off-the-shelf tool would do the job for a tenth of the price.</p>
+    </div>
+
+    <div class="split">
+      <div class="lane">
+        <div class="lane-head">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9.5" cy="10" r="1.3"/><circle cx="14.5" cy="10" r="1.3"/><path d="M9 15h6"/><path d="M12 1.5V4M12 20v2.5M1.5 12H4M20 12h2.5"/></svg></span>
+          <h3>Tailored AI workflows</h3>
+        </div>
+        <p>Custom AI trained specifically on your company's rules, pricing algorithms and internal paperwork — so it makes your decisions, not generic ones.</p>
+        <ul>
+          <li><b>Private data models</b><span>Trained on your documents, your terminology and your logic, held in your environment rather than a shared vendor tenant.</span></li>
+          <li><b>Rules that match your business</b><span>Pricing tiers, quoting logic, eligibility checks and exception thresholds encoded exactly as your team actually applies them.</span></li>
+          <li><b>Document understanding</b><span>Your forms, contracts, specs and internal paperwork read and acted on — including the ones with no consistent layout.</span></li>
+          <li><b>Judgement handoff</b><span>Anything the model isn't confident about goes to a person with the reasoning attached, rather than being guessed at.</span></li>
+        </ul>
+      </div>
+
+      <div class="lane">
+        <div class="lane-head">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M10.5 5h3"/><path d="M9.5 12.5l1.8 1.8 3.6-3.8"/></svg></span>
+          <h3>Mobile approval chains</h3>
+        </div>
+        <p>The system gathers the project details, assembles the context, and puts a clean Approve or Reject button in front of the right manager.</p>
+        <ul>
+          <li><b>One-click sign-off</b><span>Delivered to a phone or straight into Slack or Teams. No login, no email hunting, no attachment to open first.</span></li>
+          <li><b>Multi-stage routing</b><span>Value thresholds, escalation paths, delegation when someone's out, and automatic reminders that don't nag the whole thread.</span></li>
+          <li><b>Context attached</b><span>The approver sees the quote, the margin, the history and the flags — everything needed to decide in thirty seconds.</span></li>
+          <li><b>Everything logged</b><span>Who approved what, when, and on what information. The audit trail builds itself.</span></li>
+        </ul>
+      </div>
+
+      <div class="lane">
+        <div class="lane-head">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17V9a3 3 0 0 1 3-3h2"/><path d="M21 17V9a3 3 0 0 0-3-3h-2"/><path d="M8 3.5L11 6 8 8.5"/><path d="M16 3.5L13 6l3 2.5"/><path d="M2 17h20"/><path d="M8 21h8"/></svg></span>
+          <h3>Software bridge building</h3>
+        </div>
+        <p>Custom Python and API integrations that make old legacy programs and modern cloud platforms share data seamlessly — in both directions.</p>
+        <ul>
+          <li><b>No-API legacy systems</b><span>Database connections, file drops, print streams and scheduled exports all become viable integration points.</span></li>
+          <li><b>Two-way sync</b><span>Not just reading out of the old system — writing back into it, safely, with the guardrails that requires.</span></li>
+          <li><b>Field &amp; format mapping</b><span>Their part numbers become yours. Units, currencies, tax codes and naming conventions reconciled once, permanently.</span></li>
+          <li><b>Retry &amp; recovery</b><span>Network blips and vendor outages get handled rather than losing a day's records.</span></li>
+        </ul>
+      </div>
+
+      <div class="lane">
+        <div class="lane-head">
+          <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2h9l4 4v16a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/><path d="M14.5 2v4.5H19"/><path d="M8.5 12h7M8.5 16h5"/></svg></span>
+          <h3>Compliance &amp; coordination</h3>
+        </div>
+        <p>Audit logs, project updates and client paperwork generated automatically, without anyone having to type a single line.</p>
+        <ul>
+          <li><b>Automatic audit logs</b><span>Every action, decision and transformation recorded and traceable, so the compliance answer already exists when it's asked for.</span></li>
+          <li><b>Multi-party coordination</b><span>Subcontractors, clients, inspectors and internal teams kept in step without someone owning a status email chain.</span></li>
+          <li><b>Document generation</b><span>Contracts, certificates, submittals and reports produced from live data instead of last month's template.</span></li>
+          <li><b>Deadline &amp; obligation tracking</b><span>The things that only become expensive when they're missed, surfaced before they are.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== RELIABILITY ==================== -->
+<section id="reliability">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">Built for reliability</span>
+      <h2>You shouldn't worry about it breaking when you scale.</h2>
+      <p>Custom automation earns trust or it gets switched off. Every build is engineered with the safety nets that make people comfortable relying on it.</p>
+    </div>
+
+    <div class="compliance">
+      <div>
+        <h3>Automatic fail-safes &amp; error guardrails</h3>
+        <p>If bad data comes in, the system flags it and alerts you immediately rather than silently crashing the pipeline — or worse, running on and producing a confidently wrong result nobody catches for a month.</p>
+      </div>
+      <div>
+        <h3>Safe sandbox testing</h3>
+        <p>Everything is built and tested in a secure isolated environment first, against copies of your real records. Zero risk to live daily operations while we work, and a parallel run before you cut over.</p>
+      </div>
+      <div>
+        <h3>Full code ownership</h3>
+        <p>You own every piece of custom software and code we build. Delivered into your repositories, running on your infrastructure, documented so another engineer can pick it up. No permanent developer lock-in.</p>
+      </div>
+      <div>
+        <h3>Active monitoring &amp; fine-tuning</h3>
+        <p>We don't build it and walk away. Under the managed retainer we monitor, tune and optimize behind the scenes so the system keeps running at full capacity as your volume and your rules change.</p>
+      </div>
+    </div>
+
+    <div class="own rule-top" style="margin-top:34px">
+      <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 3.2v6c0 5-3.4 8.9-8 10-4.6-1.1-8-5-8-10v-6z"/><path d="M8.8 12l2.2 2.2 4.2-4.4"/></svg></span>
+      <div>
+        <h3>The ownership clause, stated plainly</h3>
+        <p><b>You own 100% of what we build.</b> The monthly retainer is optional, and it stays optional. If you want to take the system in-house next quarter, the handover is the plan rather than a penalty — you get the code, the documentation and the video training regardless. We'd rather earn the renewal than engineer a hostage situation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== ROI CALCULATOR ==================== -->
+<section id="calculator">
+  <div class="plate"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">The efficiency bottom line</span>
+      <h2>Reclaim 15 hours a week and you've reclaimed 750 hours a year.</h2>
+      <p>That's the arithmetic behind every build on this page. Put your own numbers in — nothing is transmitted, this runs entirely in your browser.</p>
+    </div>
+
+    <div class="calc">
+      <div class="calc-head">
+        <span class="console-title">Modeled return on a custom build</span>
+        <span class="console-status"><span class="led"></span> Live calculation</span>
+      </div>
+      <div class="calc-grid">
+        <div class="calc-in">
+          <div>
+            <label for="c-hours">Hours per week lost to this process</label>
+            <input id="c-hours" type="number" min="0" step="1" value="15" inputmode="numeric">
+            <p class="form-note" style="margin-top:7px">Across everyone who touches it — data entry, chasing, re-checking, rework.</p>
+          </div>
+          <div>
+            <label for="c-rate">Fully loaded hourly rate ($)</label>
+            <input id="c-rate" type="number" min="0" step="1" value="42" inputmode="numeric">
+          </div>
+          <div>
+            <label for="c-delay">Approvals held up per month</label>
+            <input id="c-delay" type="number" min="0" step="5" value="30" inputmode="numeric">
+          </div>
+          <div>
+            <label for="c-carry">Cost of a two-day delay, each ($)</label>
+            <input id="c-carry" type="number" min="0" step="5" value="25" inputmode="numeric">
+            <p class="form-note" style="margin-top:7px">Carrying cost, missed discount, or the margin on jobs that slip. Set it to 0 to ignore.</p>
+          </div>
+          <div>
+            <label for="c-tier">Build tier</label>
+            <select id="c-tier">
+              <option value="3500|0">Micro-Build, low end — $3,500</option>
+              <option value="7500|0" selected>Micro-Build, high end — $7,500</option>
+              <option value="10000|0">Enterprise Architecture — $10,000</option>
+              <option value="25000|0">Enterprise Architecture — $25,000</option>
+              <option value="7500|1000">Micro-Build $7,500 + $1,000/mo retainer</option>
+              <option value="25000|3000">Enterprise $25,000 + $3,000/mo retainer</option>
+            </select>
+          </div>
+        </div>
+
+        <dl class="calc-out">
+          <div class="readout">
+            <dt>Hours returned per year</dt>
+            <dd id="o-hours">0</dd>
+            <small>Modeled at 85% of the process automated — the remainder still needs a human, by design.</small>
+          </div>
+          <div class="readout">
+            <dt>Annual value of recovered time</dt>
+            <dd id="o-labor">$0</dd>
+            <small>Recovered capacity redeployed, not headcount removed.</small>
+          </div>
+          <div class="readout hi">
+            <dt>First-year return, net of build and retainer</dt>
+            <dd id="o-net">$0</dd>
+            <small id="o-mult">&mdash;</small>
+          </div>
+          <div class="readout">
+            <dt>Build pays for itself in</dt>
+            <dd id="o-back">&mdash;</dd>
+            <small>Time to recover the one-time engineering fee at the modeled run-rate.</small>
+          </div>
+        </dl>
+      </div>
+      <div class="calc-foot">
+        Assumptions: 85% of the named process automated, 52 working weeks, recovered hours modeled as redeployed capacity rather than headcount reduction, delay costs counted only where you enter them. This is a model to frame a conversation, not a quote or a forecast — your real figure depends on the process, and we'll build it properly with you during scoping.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PRICING ==================== -->
+<section id="pricing">
+  <div class="plate"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">Simple investment tiers</span>
+      <h2>Bespoke engineering, scoped before it's priced.</h2>
+      <p>Custom work carries a range rather than a sticker price, because scope genuinely varies. What doesn't vary: you get a fixed number before anyone writes code, and you own everything at the end.</p>
+    </div>
+
+    <div class="tiers">
+      <!-- MICRO -->
+      <div class="tier">
+        <span class="tier-code">TIER-01</span>
+        <h3>Focused Micro-Build</h3>
+        <p class="who">Fixing one specific bottleneck — a custom mobile approval chain, or bridging two stubborn software systems.</p>
+        <div class="price"><span class="amt">$3,500</span><span class="per">&ndash; $7,500 one-time</span></div>
+        <p class="price-band">Comparable market scope: $8,000&ndash;$25,000+</p>
+        <div class="setup"><span>Managed retainer</span><b>Optional</b></div>
+        <p class="timeline">Typical delivery <b>2&ndash;4 weeks</b></p>
+        <ul class="spec">
+          <li><b>Engineering:</b> custom scripts &amp; micro-services</li>
+          <li>One process engineered end to end</li>
+          <li>Up to two systems bridged</li>
+          <li>Automatic fail-safes &amp; error guardrails</li>
+          <li>Isolated sandbox testing before cutover</li>
+          <li><b>100% code ownership</b></li>
+          <li><b>Delivery:</b> system plan, build &amp; video training</li>
+          <li>30-day post-launch warranty</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Scope a micro-build</a>
+      </div>
+
+      <!-- ENTERPRISE -->
+      <div class="tier featured">
+        <span class="tier-flag">Most scoped</span>
+        <span class="tier-code">TIER-02</span>
+        <h3>Enterprise Custom Architecture</h3>
+        <p class="who">Multi-department overhauls, private AI model builds, or complete legacy system updates.</p>
+        <div class="price"><span class="amt">$10,000</span><span class="per">&ndash; $25,000+ one-time</span></div>
+        <p class="price-band">Comparable market scope: $50,000&ndash;$250,000</p>
+        <div class="setup"><span>Managed retainer</span><b>Recommended</b></div>
+        <p class="timeline">Typical delivery <b>6&ndash;12 weeks</b></p>
+        <ul class="spec">
+          <li><b>Engineering:</b> private AI models &amp; enterprise APIs</li>
+          <li>Multi-department process redesign</li>
+          <li><b>Full custom build &amp; multi-system sync</b></li>
+          <li>Private data models trained on your rules and paperwork</li>
+          <li>Legacy modernization &amp; two-way bridges</li>
+          <li>Compliance, audit logging &amp; multi-party coordination</li>
+          <li>Isolated sandbox testing &amp; parallel run</li>
+          <li><b>100% code ownership</b></li>
+          <li>Phased delivery with fixed scope per phase</li>
+          <li>Team training &amp; full documentation</li>
+        </ul>
+        <a class="btn" href="#contact">Scope an architecture build</a>
+      </div>
+
+      <!-- RETAINER -->
+      <div class="tier">
+        <span class="tier-code">TIER-03</span>
+        <h3>Managed Systems Retainer</h3>
+        <p class="who">Continuous performance tuning, active monitoring, prompt updates and new feature additions. Optional, always.</p>
+        <div class="price"><span class="amt">$1,000</span><span class="per">&ndash; $3,000 / month</span></div>
+        <p class="price-band">Comparable market scope: 15&ndash;25% of build cost annually</p>
+        <div class="setup"><span>Commitment</span><b>Month to month</b></div>
+        <p class="timeline">Starts <b>after go-live</b></p>
+        <ul class="spec">
+          <li><b>Engineering:</b> active monitoring &amp; system tuning</li>
+          <li>Continuous performance optimization</li>
+          <li>Prompt and model updates as your rules change</li>
+          <li>New feature additions inside the retainer</li>
+          <li><b>Monthly efficiency audits &amp; health checks</b></li>
+          <li>Break-fix when a vendor changes an API</li>
+          <li><b>Priority SLA &amp; dedicated tech lead</b></li>
+          <li>Cancel any time — the build stays yours</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Add a retainer</a>
+      </div>
+    </div>
+
+    <dl class="passthrough">
+      <div>
+        <dt>Scoped before it's priced</dt>
+        <dd>Nobody quotes a range and then invoices the top of it. The scoping call produces a fixed number and a fixed scope, and changes to that scope are agreed in writing before any additional work happens.</dd>
+      </div>
+      <div>
+        <dt>Infrastructure, billed to you directly</dt>
+        <dd>Cloud hosting, model inference and any third-party services sit in your own accounts at cost. Typically $100&ndash;$500/month for a micro-build; more for high-volume architecture work. You keep the accounts.</dd>
+      </div>
+      <div>
+        <dt>What is never extra</dt>
+        <dd>Discovery, sandbox environment, testing, documentation, video training, code handover and the 30-day post-launch warranty. All of it is in the build fee.</dd>
+      </div>
+    </dl>
+
+    <div class="tbl-wrap" style="margin-top:34px">
+      <table>
+        <caption>Where these prices sit — published 2026 custom development benchmarks</caption>
+        <thead>
+          <tr>
+            <th scope="col">What you're buying</th>
+            <th scope="col">Typical published range</th>
+            <th scope="col">Ours</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Custom software, small business fixed price</th>
+            <td class="num">$8,000&ndash;$75,000</td>
+            <td class="mut">Micro-Build, $3,500&ndash;$7,500</td>
+          </tr>
+          <tr>
+            <th scope="row">Small business internal workflow tool / lean MVP</th>
+            <td class="num">$25,000&ndash;$75,000</td>
+            <td class="mut">Architecture, $10,000&ndash;$25,000+</td>
+          </tr>
+          <tr>
+            <th scope="row">Mid-range custom system, multiple integrations</th>
+            <td class="num">$50,000&ndash;$100,000</td>
+            <td class="mut">Architecture, upper range</td>
+          </tr>
+          <tr>
+            <th scope="row">Simple integration, modern documented API</th>
+            <td class="num">$2,000&ndash;$10,000 each</td>
+            <td class="mut">Bundled into the build</td>
+          </tr>
+          <tr>
+            <th scope="row">Complex legacy enterprise integration</th>
+            <td class="num">$20,000&ndash;$80,000 each</td>
+            <td class="mut">Scoped individually</td>
+          </tr>
+          <tr>
+            <th scope="row">Annual maintenance as a share of build cost</th>
+            <td class="num">15&ndash;25% per year</td>
+            <td class="mut">Retainer, optional</td>
+          </tr>
+          <tr>
+            <th scope="row">Clutch verified average custom project</th>
+            <td class="num">$132,480 over ~13 months</td>
+            <td class="mut">Not what we sell</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note rule-top">That last row is the honest comparison. We are dramatically cheaper than the custom software market because we are not selling the same thing: no ground-up platform, no thirteen-month delivery, no team of eight. We engineer the narrow piece of your operation that is actually costing money, using AI to compress the build, and we hand it over. If what you genuinely need is a full platform, we'll say so and point you at someone who builds those.</p>
+  </div>
+</section>
+
+<!-- ==================== PROCESS ==================== -->
+<section id="process">
+  <div class="plate"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">How it works</span>
+      <h2>Whiteboard, sandbox, live.</h2>
+      <p>Numbered because it genuinely is a sequence — each step depends on the one before it.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step">
+        <span class="num">01</span>
+        <h3>Map</h3>
+        <p>We sit with the people who actually run the process and draw it — every branch, every exception, every "well, except when it's a rush job." That map becomes the spec, and you get a fixed price against it.</p>
+      </div>
+      <div class="step">
+        <span class="num">02</span>
+        <h3>Build</h3>
+        <p>Engineered in an isolated sandbox against copies of your real records. Fail-safes, guardrails and error handling are built in from the start, not bolted on when something goes wrong.</p>
+      </div>
+      <div class="step">
+        <span class="num">03</span>
+        <h3>Run</h3>
+        <p>Parallel run first so you can compare the automated output against the manual one. Then cutover, video training, code handover — and optional monitoring if you'd rather we kept watching it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== COVERAGE ==================== -->
+<div class="coverage">
+  <div class="wrap">
+    <span class="mono">Built on the Emerald Coast &middot; delivered nationwide</span>
+    <div class="towns">
+      <span class="town">Pensacola</span>
+      <span class="town">Navarre</span>
+      <span class="town">Gulf Breeze</span>
+      <span class="town">Fort Walton Beach</span>
+      <span class="town">Destin</span>
+      <span class="town">Miramar Beach</span>
+      <span class="town">Santa Rosa</span>
+      <span class="town">Crestview</span>
+      <span class="town">Orange Beach</span>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== FAQ ==================== -->
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="mono">Questions</span>
+      <h2>Asked before every engagement.</h2>
+    </div>
+
+    <div class="faq">
+      <details>
+        <summary>How is this different from Zapier or Make?</summary>
+        <div class="ans">Those tools are genuinely good, and if one of them solves your problem we will tell you so rather than sell you a build. Where they stop: conditional logic several layers deep, pricing or approval rules unique to your company, systems with no modern API, and anything needing real error handling rather than a failed-run notification. The signal that you've outgrown them is usually that you're building workarounds for the workaround, and one person is the only one who understands the whole chain.</div>
+      </details>
+      <details>
+        <summary>How much does a custom build cost?</summary>
+        <div class="ans">A Focused Micro-Build that removes one specific bottleneck runs $3,500&ndash;$7,500 one-time. Enterprise Custom Architecture — multi-department overhauls, private AI models, legacy modernization — runs $10,000&ndash;$25,000+. The Managed Systems Retainer is $1,000&ndash;$3,000/month and is optional. For context, published 2026 benchmarks put full custom software at $25,000&ndash;$500,000+, with the Clutch verified average at $132,480 over roughly 13 months. We're cheaper because we don't build platforms — we engineer the specific piece that's costing you money.</div>
+      </details>
+      <details>
+        <summary>Who owns the code?</summary>
+        <div class="ans">You do, entirely. Every script, model configuration, integration and document is yours, delivered into your repositories and running on your infrastructure, with documentation good enough for another engineer to pick it up. No permanent developer lock-in and nothing that expires if you stop paying us. That's precisely why the retainer is optional.</div>
+      </details>
+      <details>
+        <summary>What happens if bad data hits the system?</summary>
+        <div class="ans">It's flagged and you're alerted, rather than propagating silently. Every build ships with automatic fail-safes and error guardrails, because the dangerous failure in automation is never the process that stops — it's the one that keeps running and is quietly wrong for six weeks. Anything the system can't resolve confidently is routed to a person with the full context attached.</div>
+      </details>
+      <details>
+        <summary>Will you be testing this on my live operations?</summary>
+        <div class="ans">No. Everything is built and tested in a secure isolated environment first, using copies of your real records, so there's zero risk to daily operations while we work. Then we run the new system in parallel with the existing manual process so you can compare outputs before trusting it. Cutover happens when you're satisfied, not when we're finished.</div>
+      </details>
+      <details>
+        <summary>Can you work with our old industry-specific software?</summary>
+        <div class="ans">Usually. Legacy software with no modern API still has a database, a file export, a print stream or a screen, and any one of those can become an integration point. This is the most common reason people come to us. Published benchmarks show why it needs scoping carefully: simple integrations with well-documented modern APIs add $2,000&ndash;$10,000 to a project, while complex legacy enterprise integrations run $20,000&ndash;$80,000 each. Finding out which one you have is the first thing we do.</div>
+      </details>
+      <details>
+        <summary>How long does it take?</summary>
+        <div class="ans">A Focused Micro-Build typically runs two to four weeks from scoping call to live system. Enterprise Custom Architecture runs six to twelve weeks depending on how many systems are involved and how cooperative their interfaces turn out to be. Both are short relative to the category — industry data puts typical full custom software delivery at around 13 months — because we're engineering a process, not building a platform.</div>
+      </details>
+      <details>
+        <summary>What if you build it and we don't like it?</summary>
+        <div class="ans">The parallel run exists so that question gets answered before cutover rather than after. Beyond that: fixed scope agreed in writing before work starts, phased delivery on larger builds so you're never committing the whole budget to an unproven design, and a 30-day post-launch warranty. If the map we drew together turns out to be wrong, fixing it is on us.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SOURCES ==================== -->
+<section id="sources" style="padding-top:0">
+  <div class="wrap sources">
+    <h3>Market benchmark sources</h3>
+    <ol>
+      <li>Clutch 2026 verified project pricing data — average custom software project of $132,480 with a typical delivery timeline of roughly 13 months.</li>
+      <li>Published 2026 custom development cost guides — $25,000&ndash;$75,000 for a small business internal workflow tool or lean MVP; $8,000&ndash;$75,000 fixed price for small-to-midsize custom software; $50,000&ndash;$100,000 for mid-range systems with multiple integrations.</li>
+      <li>Integration cost benchmarks — $2,000&ndash;$10,000 for a simple integration against a well-documented modern API, $20,000&ndash;$80,000 for a complex legacy enterprise integration.</li>
+      <li>Maintenance benchmarks — 15&ndash;25% of initial build cost annually as a standard starting budget for ongoing support.</li>
+      <li>Andersen 2026 analysis — scope expansion alone can increase a project budget by 40&ndash;120%, which is why we fix scope in writing before build.</li>
+    </ol>
+    <p class="rule-top" style="margin-top:24px">Market ranges above are published third-party figures for the custom software category generally. They are included for comparison, not because our engagements are equivalent in scope — a focused micro-build is deliberately a much narrower piece of work than a ground-up platform, and priced accordingly. The operating metrics in the transformation table describe what we design toward; actual results depend entirely on your process and are modeled with you during scoping.</p>
+  </div>
+</section>
+
+<!-- ==================== CTA BAND ==================== -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="band">
+      <div>
+        <h2>Tell us what's slowing you down. We'll build the fix.</h2>
+        <p>Let's map out your most frustrating manual process, cut out the busywork, and build a streamlined system that runs on autopilot. Twenty minutes, and if a $30 off-the-shelf tool would do the job we'll tell you that instead.</p>
+      </div>
+      <a class="btn" href="#contact">Book your strategy call</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CONTACT ==================== -->
+<section id="contact">
+  <div class="plate"></div>
+  <div class="wrap contact-grid">
+    <div class="contact-copy">
+      <span class="mono">Book a call</span>
+      <h2>Draw us the bottleneck.</h2>
+      <p>Twenty minutes. Bring the process everybody complains about, the systems involved, and roughly how many hours a week it eats. That's enough for us to tell you whether it's a micro-build or an architecture job.</p>
+      <dl class="direct">
+        <dt>Email</dt>
+        <dd><a href="mailto:sales@aiagency777.com">sales@aiagency777.com</a></dd>
+        <dt>Phone</dt>
+        <dd><a href="tel:+18506844339">(850) 684-4339</a></dd>
+        <dt>Based in</dt>
+        <dd>Navarre, Florida</dd>
+      </dl>
+    </div>
+
+    <form id="lead-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+      <input type="hidden" name="access_key" value="4e92a018-3e6c-46b3-aa48-05164ecfef4d">
+      <input type="hidden" name="subject" value="New Custom Builds Service Page Lead">
+      <input type="hidden" name="page" value="custom-builds">
+
+      <!-- Honeypot: real users cannot see or complete this field -->
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off">
+
+      <div>
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" required autocomplete="name" maxlength="100">
+      </div>
+
+      <div>
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" required autocomplete="email" maxlength="254">
+      </div>
+
+      <div>
+        <label for="f-biz">Business</label>
+        <input id="f-biz" name="business" type="text" autocomplete="organization" maxlength="150">
+      </div>
+
+      <div>
+        <label for="f-need">Which tier sounds right?</label>
+        <select id="f-need" name="need">
+          <option>Focused Micro-Build — $3,500–$7,500</option>
+          <option>Enterprise Custom Architecture — $10,000+</option>
+          <option>Managed Systems Retainer</option>
+          <option>Free process mapping call first</option>
+          <option>Not sure yet — let's talk</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="f-systems">Which systems are involved?</label>
+        <input id="f-systems" name="systems" type="text" maxlength="150" placeholder="e.g. legacy ERP, QuickBooks, Slack">
+      </div>
+
+      <div>
+        <label for="f-msg">Describe the bottleneck</label>
+        <textarea id="f-msg" name="message" maxlength="3000" placeholder="What happens today, who does it, and roughly how long it takes."></textarea>
+      </div>
+
+      <button class="btn" type="submit" id="f-submit">Send it</button>
+
+      <p class="form-msg" id="f-status" role="status" aria-live="polite"></p>
+
+      <p class="form-note">We reply within one business day. Custom systems engineering, built for high-efficiency operations.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p>&copy; 2026 AI Agency 777 &middot; Navarre, FL</p>
+    <p>Industrial-grade AI &middot; Gulf Coast &middot; <a href="/sitemap.html">Site directory</a></p>
+  </div>
+</footer>
+
+<script>
+/* ---------- Motion: sonar cursor + scroll reveal ---------- */
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const canHover      = window.matchMedia('(hover: hover)').matches;
+
+/* ---------- The reels ----------
+   Spin on load, respin on hover. The strip already rests on 7,
+   so if the animation never runs the mark still reads 777.   */
+const brand = document.getElementById('brand');
+
+function spinReels(){
+  if (reducedMotion) return;
+  brand.classList.remove('spin');
+  void brand.offsetWidth;            // force reflow so the animation can restart
+  brand.classList.add('spin');
+}
+brand.addEventListener('mouseenter', spinReels);
+
+/* ---------- THE FIELD: living background ----------
+   A sparse voxel lattice. Each cell only lights when the plasma
+   wave crosses its threshold, so at any instant most of the grid
+   is dark — that keeps it cheap AND keeps it from competing with
+   the text. Scroll drives the field's depth offset.
+
+   Pauses when the tab is hidden. Never runs under reduced motion. */
+function startField(){
+  if (reducedMotion) return;
+
+  const wash = document.createElement('div');
+  wash.id = 'wash';
+  document.body.appendChild(wash);
+
+  const host = document.createElement('div');
+  host.id = 'field';
+  host.innerHTML = '<canvas></canvas>';
+  document.body.appendChild(host);
+
+  const cv  = host.querySelector('canvas');
+  const ctx = cv.getContext('2d', { alpha:true, desynchronized:true });
+
+  // A 4K monitor must not be handed 4x the work of a laptop. The
+  // lattice spacing is derived from the cell BUDGET, not the other
+  // way round — so the cost is bounded no matter the display.
+  let MAX_CELLS = 900;
+  let W, H, GAP, cols, rows, halo = true;
+
+  function size(){
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    W = window.innerWidth; H = window.innerHeight;
+    GAP = Math.max(34, Math.round(Math.sqrt((W * H) / MAX_CELLS)));
+    cols = Math.ceil(W / GAP) + 2;
+    rows = Math.ceil(H / GAP) + 2;
+    cv.width = W * dpr; cv.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  size();
+  window.addEventListener('resize', size);
+
+  let scroll = 0, target = 0;
+  window.addEventListener('scroll', () => { target = window.scrollY; }, { passive:true });
+
+  const A = [34, 195, 176], B = [255, 201, 60];
+
+  let raf = 0, running = true, dead = false;
+  let ema = 16, samples = 0, strikes = 0, last = performance.now();
+
+  function stop(){
+    dead = true; running = false;
+    cancelAnimationFrame(raf);
+    host.remove();
+    window.removeEventListener('resize', size);
+  }
+
+  function draw(now){
+    if (dead) return;
+
+    // --- frame budget. If this machine cannot hold the frame, we
+    // --- take work away from it. Twice. Then we get out entirely.
+    const dt = now - last; last = now;
+    if (dt < 200) ema = ema * 0.9 + dt * 0.1;   // ignore tab-switch gaps
+    if (++samples > 90){
+      samples = 0;
+      if (ema > 23){
+        strikes++;
+        if (strikes === 1){ halo = false; }               // drop the bloom
+        else if (strikes === 2){ MAX_CELLS = 420; size(); } // halve the lattice
+        else { stop(); return; }                           // give the machine its GPU back
+        ema = 16;
+      }
+    }
+
+    const t = now / 1000;
+    scroll += (target - scroll) * 0.06;
+
+    ctx.clearRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    const drift = scroll * 0.14;
+
+    // ONE slow breath drives the field: the gate drops (more of the
+    // lattice ignites) while the brightness lifts (what is lit burns
+    // harder). Together that reads as a charge building and releasing.
+    const pulse = 0.5 + 0.5 * Math.sin(t * 0.85);
+    const GATE  = 0.46 - pulse * 0.16;
+    const LIFT  = 0.62 + pulse * 0.62;
+    const inv   = 1 / (1 - GATE);
+
+    for (let r = 0; r < rows; r++){
+      const y  = (r - 1) * GAP;
+      const wy = y + (drift % GAP);
+      const gy = y + drift;
+      const sy1 = Math.sin(gy * 0.013 - t * 0.42);
+      const sm  = (Math.sin(gy * 0.004 + t * 0.25) + 1) / 2;
+
+      const cr = (A[0] + (B[0] - A[0]) * sm) | 0;
+      const cg = (A[1] + (B[1] - A[1]) * sm) | 0;
+      const cb = (A[2] + (B[2] - A[2]) * sm) | 0;
+      const col = `rgb(${cr},${cg},${cb})`;
+      ctx.fillStyle = col;                    // set once per ROW, not per cell
+
+      for (let c = 0; c < cols; c++){
+        const x = (c - 1) * GAP;
+        const v = (
+          Math.sin(x * 0.011 + t * 0.55) + sy1 +
+          Math.sin((x + gy) * 0.007 + t * 0.3)
+        ) / 3;
+
+        if (v < GATE) continue;
+        const a = Math.min(1, (v - GATE) * inv * LIFT);
+        const s = 2 + a * 6;
+
+        // Bloom without shadowBlur. Three stacked translucent rects
+        // approximate a glow for roughly the cost of three fills —
+        // shadowBlur costs ~50-100x a fill and was crashing machines.
+        if (halo && a > 0.55){
+          ctx.globalAlpha = a * 0.10;
+          ctx.fillRect(x - s*1.9, wy - s*1.9, s*3.8, s*3.8);
+          ctx.globalAlpha = a * 0.16;
+          ctx.fillRect(x - s*1.1, wy - s*1.1, s*2.2, s*2.2);
+        }
+
+        ctx.globalAlpha = a * 0.62;
+        ctx.fillRect(x - s/2, wy - s/2, s, s);
+      }
+    }
+
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.globalAlpha = 1;
+    wash.style.transform = `translateY(${-scroll * 0.06}px)`;
+
+    raf = requestAnimationFrame(draw);
+  }
+
+  raf = requestAnimationFrame(draw);
+
+  // One loop. Ever. The old code could stack a second rAF chain on
+  // every tab switch, and each one kept scheduling more.
+  document.addEventListener('visibilitychange', () => {
+    if (dead) return;
+    if (document.hidden){
+      running = false;
+      cancelAnimationFrame(raf);
+    } else if (!running){
+      running = true;
+      last = performance.now();
+      raf = requestAnimationFrame(draw);
+    }
+  });
+}
+
+/* ---------- ELECTRIFY: the beat after the derezz ----------
+   Current reaches each element at a slightly different moment,
+   so the page stutters alive in pieces rather than blinking as
+   one surface. That stagger is not a stylistic choice — a whole
+   screen flashing in unison is a photosensitivity hazard. This
+   never flashes more than a fraction of the viewport at a time.
+
+   Only elements ALREADY ON SCREEN are charged. Anything below
+   the fold still belongs to the scroll-reveal, and animating a
+   hidden element's opacity would drag it into view early.     */
+const ZAP_SELECTOR = [
+  '.brand-name', 'nav .nav-link', '.bar .btn',
+  '.eyebrow .mono', 'h1', '.lede', '.hero-cta .btn',
+  '.console-title', '.console-status', '.ch-code', '.ch-name',
+  '.ch-desc', '.console-foot'
+].join(',');
+
+function electrify(){
+  if (reducedMotion) return;
+
+  const vh = window.innerHeight;
+  const els = [...document.querySelectorAll(ZAP_SELECTOR)]
+    .filter(el => {
+      const r = el.getBoundingClientRect();
+      return r.top < vh && r.bottom > 0;      // on screen only
+    });
+
+  const variants = ['a', 'b', 'c'];
+
+  els.forEach(el => {
+    el.classList.add('zap', variants[(Math.random() * 3) | 0]);
+    // up to 1.5s of scatter — no two elements arc together
+    el.style.setProperty('--zd', `${(Math.random() * 1.5).toFixed(2)}s`);
+  });
+
+  // the LED is the one thing genuinely under load
+  const led = document.querySelector('.led');
+  if (led){
+    setTimeout(() => led.classList.add('hot'), 500);
+    setTimeout(() => led.classList.remove('hot'), 2400);
+  }
+
+  // strip the classes once the charge settles, so hover states
+  // and scroll-reveal are handed back a clean DOM
+  setTimeout(() => {
+    els.forEach(el => {
+      el.classList.remove('zap', 'a', 'b', 'c');
+      el.style.removeProperty('--zd');
+    });
+  }, 4200);
+}
+
+/* ---------- DEREZZ: the boot sequence ----------
+   Three acts, on one canvas:
+     RESOLVE   voxels flicker into existence, centre outward
+     PLASMA    the field breathes — colour cycles gulf -> gold
+     DEREZZ    it disintegrates from the centre out, and the
+               page is revealed underneath
+
+   Everything here is decoration. If the visitor asked for
+   reduced motion, or JS never runs, they just get the site.  */
+function derezz(){
+  const host = document.createElement('div');
+  host.id = 'derezz';
+  host.innerHTML = '<canvas></canvas><p class="skip-hint">Click to skip</p>';
+  document.documentElement.classList.add('booting');
+  document.body.appendChild(host);
+
+  const cv  = host.querySelector('canvas');
+  const ctx = cv.getContext('2d', { alpha:false, desynchronized:true });
+
+  // Bounded cube count. Previously a 4K display generated 8,400 cubes
+  // and 500,000 canvas save/restore calls per second.
+  const MAX_CUBES = 900;
+  let W, H, cells, CELL;
+
+  function build(){
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    W = window.innerWidth; H = window.innerHeight;
+    CELL = Math.max(30, Math.round(Math.sqrt((W * H) / MAX_CUBES)));
+    cv.width = W * dpr; cv.height = H * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    const cx = W / 2, cy = H / 2, maxD = Math.hypot(cx, cy);
+    cells = [];
+    for (let y = 0; y < H + CELL; y += CELL){
+      for (let x = 0; x < W + CELL; x += CELL){
+        const d = Math.hypot(x - cx, y - cy) / maxD;
+        const ang = Math.atan2(y - cy, x - cx);
+        cells.push({
+          x, y,
+          tIn:  240 + d * 420 + Math.random() * 220,
+          tOut: 1180 + d * 340 + Math.random() * 260,
+          vx: Math.cos(ang) * (70 + Math.random() * 190),
+          vy: Math.sin(ang) * (70 + Math.random() * 190) - 110,
+          seed: Math.random() * 6.283,
+          fk:   Math.random() * 40 + 30      // flicker rate, fixed at build
+        });
+      }
+    }
+  }
+
+  build();
+  window.addEventListener('resize', build);
+
+  const START = performance.now();
+  const END   = 2250;
+  let finished = false, slow = 0, frames = 0, last = START;
+
+  function finish(){
+    if (finished) return;
+    finished = true;
+    host.classList.add('done');
+    document.documentElement.classList.remove('booting');
+    document.documentElement.classList.add('booted');
+    spinReels();
+    startField();
+    electrify();
+    setTimeout(() => { host.remove(); window.removeEventListener('resize', build); }, 700);
+  }
+
+  host.addEventListener('click', finish);
+
+  function frame(now){
+    // If the opening animation itself is choking the machine, the
+    // opening animation is not worth having. Bail to the site.
+    const dt = now - last; last = now;
+    if (++frames > 8 && dt > 34 && ++slow > 6){ finish(); return; }
+
+    const t = now - START;
+    const ts = t / 1000;
+
+    ctx.fillStyle = '#06171C';
+    ctx.fillRect(0, 0, W, H);
+    ctx.globalCompositeOperation = 'lighter';
+
+    for (let i = 0; i < cells.length; i++){
+      const c = cells[i];
+      let a, s = CELL - 3, flash = 0, px = c.x, py = c.y;
+
+      if (t < c.tIn) continue;
+
+      if (t < c.tOut){
+        const age = t - c.tIn;
+        a = age < 220 ? age / 220 : 1;
+        // deterministic flicker — no Math.random() in the hot loop
+        if (age < 200 && Math.sin(age * c.fk) > 0.55) a *= 0.35;
+      } else {
+        const p = (t - c.tOut) / 720;
+        if (p >= 1) continue;
+        a = 1 - p;
+        s = (CELL - 3) * (1 - p * 0.85);
+        flash = p < 0.16 ? (1 - p / 0.16) : 0;
+        px += c.vx * p;
+        py += c.vy * p + 190 * p * p;      // gravity takes the debris
+      }
+
+      const w = (
+        Math.sin(c.x * 0.014 + ts * 2.0 + c.seed) +
+        Math.sin(c.y * 0.018 + ts * 1.5) +
+        Math.sin((c.x + c.y) * 0.009 + ts * 1.1)
+      ) / 3;
+      const m = (w + 1) / 2;
+
+      let r = A0 + (B0 - A0) * m;
+      let g = A1 + (B1 - A1) * m;
+      let b = A2 + (B2 - A2) * m;
+      if (flash){ r += (255-r)*flash; g += (255-g)*flash; b += (255-b)*flash; }
+
+      const col = `rgb(${r|0},${g|0},${b|0})`;
+
+      // No save/restore, no rotate. Tumbling debris cost 130,000
+      // save/restore pairs per second and was not worth the frames.
+      ctx.fillStyle = col;
+      ctx.globalAlpha = a * 0.34;
+      ctx.fillRect(px, py, s, s);
+
+      ctx.globalAlpha = a * 0.9;
+      ctx.strokeStyle = col;
+      ctx.lineWidth = 1;
+      ctx.strokeRect(px, py, s, s);
+
+      ctx.globalAlpha = a * 0.5;
+      ctx.fillRect(px, py, s, 2);          // top-face highlight = reads as a cube
+    }
+
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.globalAlpha = 1;
+
+    if (t < END && !finished) requestAnimationFrame(frame);
+    else finish();
+  }
+
+  requestAnimationFrame(frame);
+}
+
+const A0 = 34, A1 = 195, A2 = 176;
+const B0 = 255, B1 = 201, B2 = 60;
+
+if (reducedMotion) {
+  spinReels();                     // no-op under reduced motion, but keeps the call site honest
+} else if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(derezz);   // wait for fonts so nothing reflows behind the overlay
+} else {
+  window.addEventListener('load', derezz);
+}
+
+/* The light that follows the pointer across panel surfaces. */
+if (canHover && !reducedMotion) {
+  const panels = document.querySelectorAll('.cell, .channel, .step, .lane, .tier, .node');
+  panels.forEach(panel => {
+    panel.addEventListener('pointermove', (e) => {
+      const r = panel.getBoundingClientRect();
+      panel.style.setProperty('--mx', `${e.clientX - r.left}px`);
+      panel.style.setProperty('--my', `${e.clientY - r.top}px`);
+    });
+  });
+}
+
+/* Content surfaces as you scroll. One movement, staggered. */
+if (!reducedMotion && 'IntersectionObserver' in window) {
+  const targets = [...document.querySelectorAll(
+    '.sec-head, .split .lane, .metrics .metric, .papers .paper, .calc, .tiers .tier, .tbl-wrap, .compliance, .quote-band, .flow, .own, .board .cell, .steps .step, .towns .town, .faq, .band, .sources, .contact-copy, #lead-form'
+  )].filter(el => !el.classList.contains('zap'));
+
+  targets.forEach(el => el.classList.add('reveal'));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      // stagger siblings so rows cascade rather than snapping in together
+      const siblings = Array.from(entry.target.parentElement.children);
+      const i = siblings.indexOf(entry.target);
+      entry.target.style.transitionDelay = `${Math.min(i, 8) * 55}ms`;
+      entry.target.classList.add('in');
+      io.unobserve(entry.target);
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+  targets.forEach(el => io.observe(el));
+}
+
+/* ============================================================
+   EFFICIENCY MODEL — custom builds
+   Runs entirely client-side. Nothing here is transmitted.
+   Every constant is stated in the UI so a visitor can argue
+   with the assumptions rather than take the number on faith.
+   ============================================================ */
+(() => {
+  const AUTOMATED = 0.85;   // share of the named process actually removed
+  const WEEKS     = 52;
+  const MONTHS    = 12;
+
+  const el = id => document.getElementById(id);
+  const inputs = ['c-hours','c-rate','c-delay','c-carry','c-tier'].map(el);
+  if (inputs.some(i => !i)) return;
+
+  const money = n => '$' + Math.round(n).toLocaleString('en-US');
+
+  function run(){
+    const hrs   = Math.max(0, +el('c-hours').value || 0);
+    const rate  = Math.max(0, +el('c-rate').value  || 0);
+    const delay = Math.max(0, +el('c-delay').value || 0);
+    const carry = Math.max(0, +el('c-carry').value || 0);
+
+    const [build, retainer] = el('c-tier').value.split('|').map(Number);
+
+    const hoursYear = hrs * AUTOMATED * WEEKS;
+    const labourYr  = hoursYear * rate;
+    const delayYr   = delay * carry * MONTHS;
+
+    const grossYr = labourYr + delayYr;
+    const netYr   = grossYr - build - (retainer * MONTHS);
+
+    el('o-hours').textContent = Math.round(hoursYear).toLocaleString('en-US');
+    el('o-labor').textContent = money(labourYr);
+    el('o-net').textContent   = (netYr < 0 ? '-' : '') + money(Math.abs(netYr));
+
+    const firstYearCost = build + retainer * MONTHS;
+    if (grossYr > 0 && firstYearCost > 0){
+      const delayNote = delayYr > 0 ? `, including ${money(delayYr)} from faster approvals` : '';
+      el('o-mult').textContent =
+        `${(grossYr / firstYearCost).toFixed(1)}× the first-year cost, modeled${delayNote}.`;
+    } else {
+      el('o-mult').textContent = 'Add your numbers above.';
+    }
+
+    // payback is measured against the one-time build only, net of any retainer
+    const monthlyNet = (grossYr / MONTHS) - retainer;
+    if (monthlyNet > 0 && build > 0){
+      const months = build / monthlyNet;
+      el('o-back').textContent = months < 1
+        ? `${Math.max(1, Math.round(months * 30))} days`
+        : `${months.toFixed(1)} months`;
+    } else {
+      el('o-back').textContent = '—';
+    }
+  }
+
+  inputs.forEach(i => { i.addEventListener('input', run); i.addEventListener('change', run); });
+  run();
+})();
+
+/* ============================================================
+   FAQ — one open at a time keeps the page from turning into a
+   wall of text the moment someone gets curious.
+   ============================================================ */
+(() => {
+  const faqs = [...document.querySelectorAll('.faq details')];
+  faqs.forEach(d => d.addEventListener('toggle', () => {
+    if (!d.open) return;
+    faqs.forEach(other => { if (other !== d) other.open = false; });
+  }));
+})();
+
+/* ============================================================
+   LEAD FORM -> Web3Forms
+   ============================================================ */
+(() => {
+  const leadForm = document.getElementById('lead-form');
+  const submitButton = document.getElementById('f-submit');
+  const statusMessage = document.getElementById('f-status');
+  if (!leadForm || !submitButton || !statusMessage) return;
+
+  leadForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    if (!leadForm.checkValidity()){
+      leadForm.reportValidity();
+      return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending…';
+    statusMessage.textContent = '';
+    statusMessage.className = 'form-msg';
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(leadForm),
+        headers: { Accept: 'application/json' }
+      });
+
+      const result = await response.json();
+      if (!response.ok || !result.success) throw new Error(result.message || 'Submission failed');
+
+      statusMessage.textContent = 'Sent. We\'ll reply within one business day.';
+      statusMessage.className = 'form-msg ok';
+      leadForm.reset();
+    } catch (error) {
+      statusMessage.textContent = 'That didn\'t send. Email sales@aiagency777.com instead.';
+      statusMessage.className = 'form-msg err';
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Send it';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
