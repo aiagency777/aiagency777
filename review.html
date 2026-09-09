@@ -344,47 +344,135 @@ footer{border-top:1px solid var(--rule); padding:40px 0}
       <div class="direct"><a href="mailto:sales@aiagency777.com">sales@aiagency777.com &rarr;</a></div>
     </div>
 
-    <form class="formcard" method="post" action="[FORM ENDPOINT]">
-      <div class="f-name">Book the review</div>
+    <form
+  id="lead-form"
+  action="https://api.web3forms.com/submit"
+  method="POST"
+  novalidate
+>
+  <input
+    type="hidden"
+    name="access_key"
+    value="4e92a018-3e6c-46b3-aa48-05164ecfef4d"
+  >
 
-      <div class="row">
-        <div class="col">
-          <label class="lbl" for="first">First name</label>
-          <input class="fld" id="first" type="text" name="first" autocomplete="given-name" required>
-        </div>
-        <div class="col">
-          <label class="lbl" for="last">Last name</label>
-          <input class="fld" id="last" type="text" name="last" autocomplete="family-name" required>
-        </div>
+  <input
+    type="hidden"
+    name="subject"
+    value="New AI Agency Website Lead"
+  >
+
+  <!-- Honeypot: real users cannot see or complete this field -->
+  <input
+    type="checkbox"
+    name="botcheck"
+    class="hidden"
+    style="display: none;"
+    tabindex="-1"
+    autocomplete="off"
+  >
+
+  <div>
+    <label for="f-name">Name</label>
+    <input
+      id="f-name"
+      name="name"
+      type="text"
+      required
+      autocomplete="name"
+      maxlength="100"
+    >
+  </div>
+
+  <div>
+    <label for="f-email">Email</label>
+    <input
+      id="f-email"
+      name="email"
+      type="email"
+      required
+      autocomplete="email"
+      maxlength="254"
+    >
+  </div>
+
+  <div>
+    <label for="f-biz">Business</label>
+    <input
+      id="f-biz"
+      name="business"
+      type="text"
+      autocomplete="organization"
+      maxlength="150"
+    >
+  </div>
+
+  <div>
+    <label for="f-need">What do you need built?</label>
+    <select id="f-need" name="need">
+      <option>Live AI voice agent</option>
+      <option>Workflow automation</option>
+      <option>Lead generation</option>
+      <option>CRM setup</option>
+      <option>Website</option>
+      <option>Not sure yet — let's talk</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="f-msg">Details</label>
+    <textarea
+      id="f-msg"
+      name="message"
+      maxlength="3000"
+    ></textarea>
+  </div>
+
+  <button class="btn" type="submit" id="f-submit">Send it</button>
+
+  <p
+    class="form-msg"
+    id="f-status"
+    role="status"
+    aria-live="polite"
+  ></p>
+
+  <p class="form-note">
+    We reply within one business day. No sequences, no drip, no nonsense.
+  </p>
+</form>
+    <!-- <form id="lead-form" novalidate>
+      <div>
+        <label for="f-name">Name</label>
+        <input id="f-name" name="name" type="text" required autocomplete="name">
       </div>
-
-      <div class="col">
-        <label class="lbl" for="phone">Phone number</label>
-        <input class="fld" id="phone" type="tel" name="phone" autocomplete="tel" required>
+      <div>
+        <label for="f-email">Email</label>
+        <input id="f-email" name="email" type="email" required autocomplete="email">
       </div>
-
-      <div class="col">
-        <label class="lbl" for="email">Email</label>
-        <input class="fld" id="email" type="email" name="email" autocomplete="email" required>
+      <div>
+        <label for="f-biz">Business</label>
+        <input id="f-biz" name="business" type="text" autocomplete="organization">
       </div>
-
-      <div class="row">
-        <div class="col">
-          <label class="lbl" for="company">Company</label>
-          <input class="fld" id="company" type="text" name="company" autocomplete="organization">
-        </div>
-        <div class="col">
-          <label class="lbl" for="trade">Trade</label>
-          <input class="fld" id="trade" type="text" name="trade">
-        </div>
+      <div>
+        <label for="f-need">What do you need built?</label>
+        <select id="f-need" name="need">
+          <option>Live AI voice agent</option>
+          <option>Workflow automation</option>
+          <option>Lead generation</option>
+          <option>CRM setup</option>
+          <option>Website</option>
+          <option>Not sure yet — let's talk</option>
+        </select>
       </div>
-
-      <div class="optnote">Company and trade are optional</div>
-
-      <button class="btn" type="submit">Book my free review</button>
-
-      <p class="privacy">Your details go to us and nobody else. No list, no resale.</p>
-    </form>
+      <div>
+        <label for="f-msg">Details</label>
+        <textarea id="f-msg" name="message"></textarea>
+      </div>
+      <button class="btn" type="submit" id="f-submit">Send it</button>
+      <p class="form-msg" id="f-status" role="status" aria-live="polite"></p>
+      <p class="form-note">We reply within one business day. No sequences, no drip, no nonsense.</p>
+    </form> -->
   </div>
 </div>
 
